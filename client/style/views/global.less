@@ -1,0 +1,106 @@
+/* ==========================================================================
+   LESS REUSABLE
+   ========================================================================== */
+@fontBody: "montserratregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontHeadlines: "montserratbold", "NovecentowideBookBold", sans-serif;
+
+ /* ==========================================================================
+   MIXINS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   GENERAL STYLES
+   ========================================================================== */
+* {
+    font-weight: 400;
+}
+body {
+    background: url("../img/backgrounds/blackboard.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html, body {
+    height: 100%;
+    font-family: @fontBody;
+    font-size: 18px;
+    line-height: 24px;
+}
+table.beerTable {
+    height: 100%;
+    width: 100%;
+    border-collapse:collapse;
+    border: 0;
+    color: #fff;
+
+    thead {
+        background: none;
+    }
+
+    thead tr > th {
+        vertical-align: middle;
+        font-family: @fontHeadlines;
+        height: 60px;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+    }
+
+    tbody tr > td {
+        border: 0;
+        vertical-align: middle;
+    }
+
+    h3 {
+        margin: 0 0 3px 0;
+    }
+
+    .beerCopy {
+        padding: 14px 40px 0 12px;
+    }
+
+    .style {
+        font-size: 14px;
+        color: #ccc;
+    }
+
+}
+#background {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   HEADERS
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    font-family: @fontHeadlines;
+}

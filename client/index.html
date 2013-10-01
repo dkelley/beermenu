@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Beer Menu</title>
+
+    <!-- SEO Stuff -->
+    <meta name="description" content="">
+
+    <!-- Mobile Stuff -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="" />
+    <link rel="apple-touch-icon" sizes="72x72" href="" />
+    <link rel="apple-touch-icon" sizes="114x114" href="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- CSS -->
+    <link href="style/public.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    Kelly&#8217;s Beer Menu
+                    <select id="background">
+                        <option value="blackboard">Blackboard</option>
+                        <option value="wood">Wooden</option>
+                        <option value="football">Football</option>
+                        <option value="bluehighlight">Blue Highlight</option>
+                    </select>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+    </table>
+
+    <script id="beerRow" type="text/x-handlebars">
+        <td class="beerRow">
+            <div class="pure-g-r">
+                <div class="pure-u-1-6">
+                    <img src="{{logo}}" alt="{{name}} label" width="100%" />
+                </div>
+                <div class="pure-u-5-6">
+                    <div class="beerCopy">
+                        <h3>{{name}}</h3>
+                        {{brewery}}, {{abv}}%
+                        <div class="style">{{style}}</body>
+                    </body>
+                </div>
+            </div>
+        </td>
+    </script>
+
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/handlebars.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            $("#background").change(function(){
+                $("body").css("background-image", "url(img/backgrounds/"+$(this).val()+".jpg)");
+            });
+
+            var template = Handlebars.compile($("#beerRow").html());
+            var data = { beerRowData: [
+                {
+                    name: "Belgian Brunette",
+                    brewery: "Long Trail Brewing Co",
+                    abv: "6.2",
+                    style: "Belgian-Style Pale Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/6aqF70/upload_lHJPgj-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                },
+                {
+                    name: "Belgian Brunette",
+                    brewery: "Long Trail Brewing Co",
+                    abv: "6.2",
+                    style: "Belgian-Style Pale Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/6aqF70/upload_lHJPgj-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                },
+                {
+                    name: "Cariboo Genuine Draft",
+                    brewery: "Pacific Western Brewery",
+                    abv: "5.5",
+                    style: "American-Style Lager",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/ekECwm/upload_qsJqWu-large.png"
+                },
+                {
+                    name: "Exit 8",
+                    brewery: "Flying Fish Brewing Company",
+                    abv: "8.3",
+                    style: "English-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/DknZZL/upload_Aw3nt8-large.png"
+                },
+                {
+                    name: "American Brown",
+                    brewery: "Reuben's Brews",
+                    abv: "5.9",
+                    style: "American-Style Brown Ale",
+                    logo: "https://s3.amazonaws.com/brewerydbapi/beer/Nrvt1a/upload_IoLh64-large.png"
+                }
+            ]};
+
+            var dataGroups = [];
+            var currentDataGroup = [];
+            var maximumGroupSize = 2;
+
+            $.each(data.beerRowData, function(i, item) {
+                currentDataGroup.push(item);
+
+                if(currentDataGroup.length == maximumGroupSize) {
+                    dataGroups.push(currentDataGroup);
+                    currentDataGroup = [];
+                }
+            });
+
+            $.each(dataGroups, function(i, dataGroup) {
+                var markup = "<tr>";
+
+                $.each(dataGroup, function(j, item) {
+                    markup += template(item);
+                });
+
+                markup += "</tr>";
+
+                $(".beerTable tbody").append(markup);
+            });
+        });
+    </script>
+</body>
+</html>
