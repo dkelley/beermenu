@@ -1,0 +1,57 @@
+{
+  "name": "beermenu",
+  "version": "0.1.0",
+  "author": "Dan Kelley <dan@kelleyland.com",
+  "description": "A beer menu design for display on TVs at the bar and managed remotely",
+  "contributors": [ 
+    {
+      "name": "Joe Detri",
+      "email": "jdetri@xmog.com"
+    }, 
+    {
+      "name": "Joe Fritz",
+      "email": "joe@xmog.com"
+    } 
+  ],
+  "bin": {
+    "http-server": "./bin/http-server"
+  },
+  "scripts": {
+    "start": "node ./bin/http-server",
+    "test": "vows --spec --isolate",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "main": "./lib/http-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkelley/beermenu.git"
+  },
+  "keywords": [
+    "beer",
+    "bar",
+    "goodtimes"
+  ],
+  "dependencies" : {
+    "colors"   :  "*",
+    "mongoosejs": ""
+    "flatiron" :  "0.1.x",
+    "optimist" :  "0.2.x",
+    "union"    :  "0.1.x",
+    "ecstatic" :  "0.1.x",
+    "plates"   :  "https://github.com/flatiron/plates/tarball/master"
+  },
+  "analyze": false,
+  "devDependencies": {
+    "vows"    :  "0.5.x",
+    "request" :  "2.1.x"
+  },
+  "bundledDependencies": [
+    "union",
+    "ecstatic"
+  ],  
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
