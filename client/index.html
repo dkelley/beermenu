@@ -27,7 +27,7 @@
     <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th colspan="2">
+                <th colspan="">
                     Kelly&#8217;s Beer Menu
                     <select id="background">
                         <option value="blackboard">Blackboard</option>
@@ -215,7 +215,7 @@
 
             var dataGroups = [];
             var currentDataGroup = [];
-            var maximumGroupSize = 2;
+            var maximumGroupSize = 3;
 
             $.each(data.beerRowData, function(i, item) {
                 currentDataGroup.push(item);
@@ -236,6 +236,7 @@
                 markup += "</tr>";
 
                 $(".beerTable tbody").append(markup);
+                $(".beerTable thead th").attr({"colspan" : maximumGroupSize});
             });
         });
     </script>
