@@ -1595,7 +1595,7 @@ table.beerTable h3 {
   margin: 0 0 3px 0;
 }
 table.beerTable .beerCopy {
-  padding: 14px 40px 0 12px;
+  padding: 0 40px 0 12px;
 }
 table.beerTable .style {
   font-size: 14px;
