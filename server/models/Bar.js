@@ -1,16 +1,16 @@
-module.exports = function(){
+module.exports = function (mongoose){
     var barSchema = mongoose.Schema({
         name: String,
-        beers: [
-        	name: String,
-        	price: Number,
-    		active: Boolean,
-        ],
-        specials: [
-        	title: String,
-        	description: String
-        ]
+        beers: [{
+            name: String,
+            price: Number,
+            active: Boolean,
+        }],
+        specials: [{
+            title: String,
+            description: String
+        }]
     });
-    var Bar = mongoose.model("Bar", barSchema);
-    return Bar;
+
+    return  mongoose.model("Bar", barSchema)
 }
