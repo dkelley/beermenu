@@ -21,7 +21,7 @@
 
     <!-- CSS -->
     <link href="style/public.css" type="text/css" rel="stylesheet" />
-
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="js/beermenu.js"></script>
 </head>
@@ -30,13 +30,16 @@
         <thead>
             <tr>
                 <th colspan="">
-                    Kelly&#8217;s Beer Menu
+                    <h1>Kelly&#8217;s Beer Menu</h1>                    
 <!--                     <select id="background">
                         <option value="blackboard">Blackboard</option>
                         <option value="wood">Wooden</option>
                         <option value="football">Football</option>
                         <option value="bluehighlight">Blue Highlight</option>
                     </select> -->
+                </th>
+                <th>
+                    <h1>On Tap</h1>
                 </th>
             </tr>
         </thead>
@@ -46,13 +49,13 @@
                 <td class="beerRow" ng-repeat="beer in beerRow">
                     <div class="pure-g-r">
                         <div class="pure-u-1-6">
-                            <img src="{{beer.logo}}" alt="{{name}} label" width="100%" />
+                            <img src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" />
                         </div>
                         <div class="pure-u-5-6">
                             <div class="beerCopy">
-                                <h3>{{beers.name}}</h3>
-                                {{beer.brewery}}, {{beer.abv}}%
-                                <div class="style">{{beer.style}}</body>
+                                <h3>{{beer.name}}</h3>
+                                {{beer.brewery.name}}, {{beer.abv}}%
+                                <div class="style">{{beer.style.name}}</body>
                             </body>
                         </div>
                     </div>
@@ -60,25 +63,5 @@
             </tr>
         </tbody>
     </table>
-
-    <script id="beerRow" type="text/x-handlebars">
-        <td class="beerRow">
-            <div class="pure-g-r">
-                <div class="pure-u-1-6">
-                    <img src="{{logo}}" alt="{{name}} label" width="100%" />
-                </div>
-                <div class="pure-u-5-6">
-                    <div class="beerCopy">
-                        <h3>{{name}}</h3>
-                        {{brewery}}, {{abv}}%
-                        <div class="style">{{style}}</body>
-                    </body>
-                </div>
-            </div>
-        </td>
-    </script>
-
-    <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/handlebars.js" type="text/javascript" charset="utf-8"></script>   
 </body>
 </html>
