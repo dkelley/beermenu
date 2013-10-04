@@ -52,6 +52,15 @@ html, body {
     font-size: 18px;
     line-height: 24px;
 }
+
+/* ==========================================================================
+   HEADERS
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    font-family: @fontHeadlines;
+}
+
 table.beerTable {
     height: 100%;
     width: 100%;
@@ -73,11 +82,13 @@ table.beerTable {
 
     tbody tr > td {
         border: 0;
-        vertical-align: middle;
+        vertical-align: top;
     }
 
     h3 {
         margin: 0 0 3px 0;
+        font-family: @fontBody;
+        font-weight: 100;
     }
 
     .beerCopy {
@@ -97,10 +108,4 @@ table.beerTable {
     font-size: 14px;
 }
 
-/* ==========================================================================
-   HEADERS
-   ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-    font-family: @fontHeadlines;
-}
+
