@@ -52,6 +52,23 @@ function BeerMenuCtrl($scope) {
 			"fgMax" : "1.018",
 			"createDate" : "2012-03-21 20:06:45"
 		},
+		"brewery" :{
+            "id": "Idm5Y5",
+            "name": "Founders Brewing Company",
+            "description": "Founders Brewing Company, founded by Mike Stevens and Dave Engbers produced its first beer in November of 1997. Built out of a dream and a passion for home brewing, what started out as a hobby quickly became a thriving business.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer.\r\n\r\nCarving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer. Carving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.",
+            "website": "http://www.foundersbrewing.com/",
+            "established": "1997",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-large.png"
+            },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:55",
+            "updateDate": "2012-09-11 19:30:21"
+        },
 		"type" : "beer"
 	},
 	{
@@ -105,6 +122,23 @@ function BeerMenuCtrl($scope) {
 			"fgMax" : "1.018",
 			"createDate" : "2012-03-21 20:06:45"
 		},
+				"brewery" :{
+            "id": "noGtDY",
+            "name": "Bell's Brewery, Inc.",
+            "description": "Bell's Brewery, Inc. began in 1985 with a quest for better beer and a 15 gallon soup kettle. Since then, we've grown into a regional craft brewery that employs more than 200 people over an 18 state area, in addition to Puerto Rico and Washington DC. The dedication to brewing flavorful, unfiltered, quality craft beers that started in 1985 is still with us today. We currently brew over 20 beers for distribution as well as many other small batch beers that are served at our pub in Kalamazoo, the Eccentric Cafe. Our ongoing goal is to brew thoughtfully, creatively and artistically. We strive to bring an authentic and pleasant experience to all of our customers through our unique ales and beers.",
+            "website": "http://www.bellsbeer.com/",
+            "established": "1985",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-large.png"
+            },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:45",
+            "updateDate": "2013-08-14 19:18:55"
+        },
 		"type" : "beer"
 	},
 	{
@@ -162,7 +196,23 @@ function BeerMenuCtrl($scope) {
 			"fgMin" : "1.018",
 			"fgMax" : "1.024",
 			"createDate" : "2012-03-21 20:06:46"
-		},
+		},"brewery" :{
+            "id": "f35hQR",
+            "name": "Spoetzl Brewery",
+            "description": "Spoetzl was founded in 1909, and claims to be the oldest independent brewery in Texas. A group of businessmen incorporated Shiner Brewing Association and placed Herman Weiss in as the company's first brewmaster. In 1914 a German immigrant brewer named Kosmas (or Kosmos) Spoetzl co-leased with Oswald Petzold with an option to buy in 1915. Spoetzl had attended brewmaster's school and apprenticed for three years in Germany, worked for eight years at the Pyramids Brewery in Cairo, Egypt, and then worked in Canada. He moved to San Antonio in search of a better climate for his health, bringing with him a family recipe for a Bavarian beer made from malted barley and hops.",
+            "website": "http://www.shiner.com/",
+            "established": "1909",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-large.png"
+            },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:42:08",
+            "updateDate": "2013-08-14 01:01:13"
+        },
 		"type" : "beer"
 	},
 	{
@@ -268,7 +318,17 @@ function BeerMenuCtrl($scope) {
 			"name" : "Other Belgian-Style Ales",
 			"description" : "Recognizing the uniqueness and traditions of several other styles of Belgian Ales, the beers entered in this category will be assessed on the merits that they do not fit existing style guidelines and information that the brewer provides explaining the history and tradition of the style. Balance of character is a key component when assessing these beers. Barrel or wood-aged entries in competitions may be directed to other categories by competition director. In competitions the brewer must provide the historical or regional tradition of the style, or his interpretation of the style, in order to be assessed properly by the judges.",
 			"createDate" : "2012-03-21 20:06:46"
-		},
+		},"brewery" : {
+            "id": "KSqbyz",
+            "name": "Duvel Moortgat",
+            "website": "http://www.duvelmoortgat.be/",
+            "established": "1871",
+            "isOrganic": "N",
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:53",
+            "updateDate": "2012-03-21 19:06:06"
+        },
 		"type" : "beer"
 	},
 	{
@@ -319,6 +379,18 @@ function BeerMenuCtrl($scope) {
 			"fgMin" : "1.002",
 			"fgMax" : "1.008",
 			"createDate" : "2012-03-21 20:06:46"
+		},
+		"brewery":{
+            "id": "MWi5Kp",
+            "name": "Miller Brewing Company",
+            "description": "The Miller Brewing Company is an American beer brewing company. Its headquarters are located in Milwaukee, Wisconsin and the company has brewing facilities in Albany, Georgia, Chippewa Falls, Wisconsin, Eden, North Carolina, Fort Worth, Texas, Irwindale, California, Milwaukee, Wisconsin, and Trenton, Ohio. On 1 July 2008 the MillerCoors company was formed as a joint venture with rival Molson Coors to consolidate the production and distribution of its products in the United States with each parent company's corporate operations and international operations remaining separate and independent of the joint venture.",
+            "website": "http://www.millerbrewing.com/",
+            "established": "1855",
+            "isOrganic": "N",
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:42:02",
+            "updateDate": "2013-08-14 19:17:27"
 		},
 		"type" : "beer"
 	},
@@ -372,6 +444,24 @@ function BeerMenuCtrl($scope) {
 			"fgMax" : "1.014",
 			"createDate" : "2012-03-21 20:06:46"
 		},
+		"brewery": 
+		{
+            "id": "avMkil",
+            "name": "Coors Brewing Company",
+            "description": "In 1873, as the United States approached its centennial year, its people were busy building a new kind of nation. It was thirsty work. And that's where Coors Brewing Company came in. When we began in that same year, we were a small, family-owned brewery, located at the foot of the Rocky Mountains. We were busy creating the same kind of crisp, refreshing beer we're known for today. While hundreds of such family-owned breweries have come and gone in the years since, we believe the reasons for our success are simple. We've never compromised on quality in producing our award-winning brews and we've never lost sight of our rich Rocky Mountain heritage. Just as important, we've always believed in doing well by doing good. We treat our employees with respect, we support the local communities where we do business, and we strive to protect the environment. That's just how we do business.",
+            "website": "http://www.coors.com/",
+            "established": "1873",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/avMkil/upload_KUwCAv-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/avMkil/upload_KUwCAv-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/avMkil/upload_KUwCAv-large.png"
+            },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:51",
+            "updateDate": "2013-08-14 19:23:55"
+        },		
 		"type" : "beer"
 	},
 	{
@@ -424,6 +514,23 @@ function BeerMenuCtrl($scope) {
 			"fgMax" : "1.018",
 			"createDate" : "2012-03-21 20:06:45"
 		},
+		"brewery":{
+            "id": "iGWHI1",
+            "name": "Ithaca Beer Company",
+            "description": "Ithaca Beer Co.,established in 1998, has a mission to brew delicious beers for the purpose of making life more enjoyable. We strive to make this company better and build our brand name and good reputation among our customers.\r\n\r\nOver the last decade we have worked hard doing just that, and we have had lots of fun in the process!  From our friendly staff to the award-winning beer to our community outreach, Ithaca Beer continues to brew beers for the purpose of making your simple moments worthwhile.  Take a moment to look around our brand new site and learn about more about Ithaca Beer as a company, the beers we brew, and our involvement in Ithaca, NY.",
+            "website": "http://ithacabeer.com/",
+            "established": "1998",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/iGWHI1/upload_a2VTid-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/iGWHI1/upload_a2VTid-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/iGWHI1/upload_a2VTid-large.png"
+            },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:58",
+            "updateDate": "2013-02-19 11:45:25"
+        },
 		"type" : "beer"
 	},
 {
@@ -469,7 +576,23 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.012",
                 "fgMax": "1.018",
                 "createDate": "2012-03-21 20:06:45"
+            },"brewery":{
+            "id": "jwWiTH",
+            "name": "Yards Brewing Company",
+            "description": "In 1988, two cash-strapped collegiate wrestlers realized that they could sustain their thirst for quality beer without spending their modest savings at the local liquor store by brewing beer themselves. So began the friendship of Tom Kehoe and Jon Bovit.\r\n\r\nAs they made their way through college they continued to experiment with homebrewing and formulating new recipes. Proud of their product, they were eager to share it with friends. An instant favorite, it wasn't long until they realized their modest homebrewing operation wasn't going to be enough to satisfy the growing demand.\r\n\r\nDuring the early 1990s, many breweries opened, and craft brewing started to gain popularity. Working in a small English-style brewery in Western Maryland, Tom Kehoe and Jon Bovit decided to take matters into their own hands, and in 1994, they founded Yards Brewing Company.",
+            "website": "http://www.yardsbrewing.com/",
+            "established": "1994",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-large.png"
             },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:42:13",
+            "updateDate": "2012-10-22 13:18:06"
+        },
             "type": "beer"
         },
 {
@@ -521,7 +644,23 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.01",
                 "fgMax": "1.014",
                 "createDate": "2012-03-21 20:06:46"
+            },"brewery":{
+            "id": "pX8lES",
+            "name": "D.G. Yuengling and Son",
+            "description": "D.G. Yuengling & Son is the oldest operating brewing company in the United States, having been established in 1829, and is one of the largest breweries by volume in the country. It is the second largest American owned brewery after the Boston Beer Company. Its headquarters is in Pottsville, Pennsylvania.\r\n\r\nYuengling produces 3.6 million barrels annually, which as of 2005, placed it sixth among American commercial breweries. Besides its two Pennsylvania facilities, Yuengling also operates a brewery in Tampa, Florida.\r\n\r\nThe family-owned brewery has traditionally changed ownership through the purchase of the company by the offspring of the previous owner. Due to the popularity of Yuengling Traditional Lager in Pennsylvania, it can be ordered by simply asking for a lager, especially in eastern parts of the state.",
+            "website": "http://www.yuengling.com",
+            "established": "1829",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/pX8lES/upload_VJc4cc-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/pX8lES/upload_VJc4cc-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/pX8lES/upload_VJc4cc-large.png"
             },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:52",
+            "updateDate": "2012-10-22 13:38:55"
+        },
             "type": "beer"
         },{
             "id": "FJf4Vn",
@@ -571,7 +710,23 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.008",
                 "fgMax": "1.014",
                 "createDate": "2012-03-21 20:06:45"
+            },"brewery":{
+            "id": "jwWiTH",
+            "name": "Yards Brewing Company",
+            "description": "In 1988, two cash-strapped collegiate wrestlers realized that they could sustain their thirst for quality beer without spending their modest savings at the local liquor store by brewing beer themselves. So began the friendship of Tom Kehoe and Jon Bovit.\r\n\r\nAs they made their way through college they continued to experiment with homebrewing and formulating new recipes. Proud of their product, they were eager to share it with friends. An instant favorite, it wasn't long until they realized their modest homebrewing operation wasn't going to be enough to satisfy the growing demand.\r\n\r\nDuring the early 1990s, many breweries opened, and craft brewing started to gain popularity. Working in a small English-style brewery in Western Maryland, Tom Kehoe and Jon Bovit decided to take matters into their own hands, and in 1994, they founded Yards Brewing Company.",
+            "website": "http://www.yardsbrewing.com/",
+            "established": "1994",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/jwWiTH/upload_pXUGPy-large.png"
             },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:42:13",
+            "updateDate": "2012-10-22 13:18:06"
+        },
             "type": "beer"
         },{
             "id": "wfsyxi",
@@ -609,7 +764,16 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.006",
                 "fgMax": "1.018",
                 "createDate": "2012-03-21 20:06:46"
-            },
+            },"brewery":{
+            "id": "e4GHxW",
+            "name": "Brouwerij van Hoegaarden",
+            "website": "http://www.hoegaarden.com/",
+            "isOrganic": "N",
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:49",
+            "updateDate": "2012-08-12 23:23:15"
+        },
             "type": "beer"
         },{
             "id": "VNqOKH",
@@ -660,7 +824,23 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.004",
                 "fgMax": "1.016",
                 "createDate": "2012-03-21 20:06:46"
+            },"brewery": {
+            "id": "EdRcIs",
+            "name": "21st Amendment Brewery",
+            "description": "The 21st Amendment Brewery offers a variety of award winning house made brews and American grilled cuisine in a comfortable loft like setting. Join us before and after Giants baseball games in our outdoor beer garden. A great location for functions and parties in our semi-private Brewers Loft. See you soon at the 21A!",
+            "website": "http://www.21st-amendment.com/",
+            "established": "2000",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/EdRcIs/upload_YmgSv3-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/EdRcIs/upload_YmgSv3-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/EdRcIs/upload_YmgSv3-large.png"
             },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:43",
+            "updateDate": "2012-10-22 17:12:59"
+        },
             "type": "beer"
         },{
             "id": "Q8hjek",
@@ -710,7 +890,23 @@ function BeerMenuCtrl($scope) {
                 "fgMin": "1.008",
                 "fgMax": "1.014",
                 "createDate": "2012-03-21 20:06:46"
+            },"brewery": {
+            "id": "pdLPeS",
+            "name": "Allagash Brewing Company",
+            "description": "Allagash Brewing Company sold its first batch of beer in the summer of 1995. The Allagash story, however, has roots that go much further back then the ten years the Portland, Maine brewery has been in operation. The roots go into the early 1990?s when founder Rob Tod saw something missing in the American beer market. They are interwoven in the craft brewing movement that has allowed the creativity of brewers to flourish over the last twenty years, and those same roots have ties that go back centuries-to the monasteries of Belgium, whose own ancient brewing methods are now practiced today by the brewers of Allagash. Allagash began as a one-man operation, with Tod assuming all brewing duties in a small space located in a building on the outskirts of the maritime city of Portland. Tod had worked in brewery settings before and recognized a void within the craft brewing movement. While both German and British styles had become prevalent throughout the U.S., the ever-creative Belgian-styles were very difficult to find. Through his travels, Tod had sampled many of these unique beers and felt that the flavors and traditions of this European nation needed to be shared with the American drinking public. He designed a small 15-barrel brewhouse specifically to embrace the Belgian tradition of beer making, gathered the finest array of authentic raw materials and began his quest towards the production of traditional Belgian style ales.",
+            "website": "http://www.allagash.com/",
+            "established": "1995",
+            "isOrganic": "N",
+            "images": {
+                "icon": "https://s3.amazonaws.com/brewerydbapi/brewery/pdLPeS/upload_0Ut2Nj-icon.png",
+                "medium": "https://s3.amazonaws.com/brewerydbapi/brewery/pdLPeS/upload_0Ut2Nj-medium.png",
+                "large": "https://s3.amazonaws.com/brewerydbapi/brewery/pdLPeS/upload_0Ut2Nj-large.png"
             },
+            "status": "verified",
+            "statusDisplay": "Verified",
+            "createDate": "2012-01-03 02:41:44",
+            "updateDate": "2013-05-06 21:21:05"
+        },
             "type": "beer"
         }
 ]};
@@ -719,16 +915,24 @@ function BeerMenuCtrl($scope) {
 		$scope.beerRows = [];
 		var beerRow = [];
 		var maximumGroupSize = 3;
+		var cnt = 0;
 	    angular.forEach($scope.beers.onTap, function(beer) {
+	    	cnt++;
 	    	beerRow.push(beer);
 			if(beerRow.length == maximumGroupSize) {
                 $scope.beerRows.push(beerRow);
                 beerRow = [];
             }
         });
+        if (beerRow.length > 0)
+        	$scope.beerRows.push(beerRow);
 
+	    if (console)
+	    	console.log("Loaded " + cnt + " beers");
         // basic setup
         $(".beerTable thead th").attr({"colspan" : maximumGroupSize-1});
+        $("td.bottomSpacer").attr({"colspan" : maximumGroupSize});
+        $("td.bottomSpacer").attr({"height" : 150});
 	};
 
 
@@ -757,5 +961,10 @@ $(function() {
           $("html, body").animate({ scrollTop: 0 }, "slow");
        }
    });
+
+	// 1 Hour = 3600000 Milliseconds
+	var t = setTimeout(function(){location.reload()},3600000);
+	if (console)
+		console.log("page reloaded")
 });
 
