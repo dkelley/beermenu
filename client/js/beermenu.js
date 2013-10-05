@@ -1,4 +1,4 @@
-function BarCtrl($scope) {
+function BeerMenuCtrl($scope) {
   $scope.beers = [
 	{
 		"id" : "UEHHoX",
@@ -732,8 +732,9 @@ function BarCtrl($scope) {
 
 	init();            
 
-
 }
+var beerMenuApp = angular.module('beerMenuApp',['beerMenuFilters']);
+beerMenuApp.controller('BeerMenuCtrl', BeerMenuCtrl);
 
 $(function() {
 	var scrollingUp = 0;
