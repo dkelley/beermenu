@@ -1570,6 +1570,18 @@ body {
   font-size: 18px;
   line-height: 24px;
 }
+/* ==========================================================================
+   HEADERS
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
+}
 table.beerTable {
   height: 100%;
   width: 100%;
@@ -1589,10 +1601,12 @@ table.beerTable thead tr > th {
 }
 table.beerTable tbody tr > td {
   border: 0;
-  vertical-align: middle;
+  vertical-align: top;
 }
 table.beerTable h3 {
   margin: 0 0 3px 0;
+  font-family: "montserratregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
 }
 table.beerTable .beerCopy {
   padding: 0 40px 0 12px;
@@ -1606,16 +1620,4 @@ table.beerTable .style {
   right: 20px;
   top: 24px;
   font-size: 14px;
-}
-/* ==========================================================================
-   HEADERS
-   ========================================================================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
 }

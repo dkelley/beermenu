@@ -1,5 +1,7 @@
 function BeerMenuCtrl($scope) {
-  $scope.beers = [
+  $scope.beers = {
+	"bottled":[],
+  "onTap" : [
 	{
 		"id" : "UEHHoX",
 		"name" : "All Day IPA",
@@ -710,19 +712,19 @@ function BeerMenuCtrl($scope) {
                 "createDate": "2012-03-21 20:06:46"
             },
             "type": "beer"
-        }        	
-];
+        }
+]};
 
 	var init = function () {
 		$scope.beerRows = [];
 		var beerRow = [];
 		var maximumGroupSize = 3;
-	    angular.forEach($scope.beers, function(beer) {
+	    angular.forEach($scope.beers.onTap, function(beer) {
 	    	beerRow.push(beer);
 			if(beerRow.length == maximumGroupSize) {
                 $scope.beerRows.push(beerRow);
                 beerRow = [];
-            }    	
+            }
         });
 
         // basic setup
@@ -730,34 +732,30 @@ function BeerMenuCtrl($scope) {
 	};
 
 
-	init();            
+	init();
 
 }
 var beerMenuApp = angular.module('beerMenuApp',['beerMenuFilters']);
 beerMenuApp.controller('BeerMenuCtrl', BeerMenuCtrl);
 
 $(function() {
-	var scrollingUp = 0;
-	// var pixelsToScroll = $(window).height();
-
-function reloadPage() {
-	document.location.reload()
-}
-	// function scrollit() {
-	//     if(scrollingUp == 0) {
-	//         $('body').delay(2000).animate({ scrollTop: $("body").scrollTop() + pixelsToScroll }, 'slow');
-	//     }
-	// }
-
-	// $('body').bind('scroll', function () {
-	//     if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-	//         scrollingUp = 1;      
-	//         $('body').delay(2000).animate({ scrollTop: 0 }, 1000, function() {
-	//             scrollingUp = 0;    
-	//         });
-	//     }
-	// });
-	// window.setInterval(scrollit, 3000);
-	console.log("loaded");
-	window.setTimeout(reloadPage, 500000);
+	var div = $("body");
+	setInterval(function(){
+	    var pos = div.scrollTop();
+	    div.animate({ scrollTop: pos + 100 });
+	}, 3000);
+	function getDocHeight() {
+	    var D = document;
+	    return Math.max(
+	        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+	        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+	        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+	    );
+	}
+	$(window).scroll(function() {
+       if($(window).scrollTop() + $(window).height() == getDocHeight()) {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+       }
+   });
 });
+
