@@ -23,6 +23,8 @@
     <link href="style/public.css" type="text/css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script -->
+    <!-- script src="http://code.angularjs.org/1.2.0-rc.2/angular-animate.js"></script -->
     <script src="js/filters.js"></script>
     <script src="js/beermenu.js"></script>
 </head>
@@ -33,12 +35,6 @@
             <tr>
                 <th colspan="">
                     <h1>Kelly&#8217;s Beer Menu</h1>
-<!--                     <select id="background">
-                        <option value="blackboard">Blackboard</option>
-                        <option value="wood">Wooden</option>
-                        <option value="football">Football</option>
-                        <option value="bluehighlight">Blue Highlight</option>
-                    </select> -->
                 </th>
                 <th>
                     <h1>On Tap</h1>
@@ -48,7 +44,7 @@
 
         <tbody>
             <tr ng-repeat="beerRow in beerRows">
-                <td class="beerRow" ng-repeat="beer in beerRow">
+                <td class="beerRow" ng-repeat="beer in beerRow | filter:query | orderBy:predicate">
                     <div class="pure-g-r">
                         <div class="pure-u-1-6">
                             <img ng-src="{{beer.labels.large | imageexists }}" alt="{{beer.name}} label" width="100%" />
