@@ -14,7 +14,19 @@ function search(req, res, next) {
    return next();
  }
 
-server.get('/save/:name', function(req, res, next) {
+
+function loadBar(req, res, next) {
+	schemas.Bar.find({"url": req.params.name}, function(err, documents) {
+		console.log("found " + documents.length);
+		if (!err && documents.length > 0)
+  			res.send(documents[0]);
+  		else
+  			res.send('no bar found for ' + req.params.name);
+	});
+	return next();
+ }
+
+server.post('/save/:name', function(req, res, next) {
 	console.log("saving %s", req.params.name);
 	console.log("schemas", schemas);
 	console.log("bar", schemas.Bar);
@@ -27,13 +39,11 @@ server.get('/save/:name', function(req, res, next) {
 		else
 			console.log(error);
 	});
-
-   return next();
- });	
-
-
+   	return next();
+});	
 
 // setup our server
+server.get('/:name', loadBar);
 server.get('/search/:name', search);
 console.log("starting server");
 server.listen(8080);
