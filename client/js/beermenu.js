@@ -46,14 +46,14 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 	var rowIndex = 0;
 	var rowList = [];
 
-	$scope.init = function () {
+	var init = function () {
         // basic setup
-        $(".beerTable thead th").attr({"colspan" : $scope.numberOfColumnms-1});
-        $("td.bottomSpacer").attr({"colspan" : $scope.numberOfColumnms});
+        $(".beerTable thead th").attr({"colspan" : numberOfColumnms-1});
+        $("td.bottomSpacer").attr({"colspan" : numberOfColumnms});
         $("td.bottomSpacer").attr({"height" : 100});        
 	};
 
-	$scope.nextRow = function(beers, numberOfColumnms){
+	var nextRow = function(beers, numberOfColumnms){
 		var row = [];
 		for (var col=0;col<numberOfColumnms;col++){
 			if (beers.length > 0){
@@ -64,6 +64,19 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		return row;
 	};
 
+	var rotateBeers = function(){
+		var newRows = rowList.slice(rowIndex, rowIndex+1);      		
+		if (newRows.length == 1){
+			console.log("updating ", rowIndex, newRows[0]);
+			$scope.beerRows.pop();
+			$scope.beerRows.unshift(newRows[0]);			
+		}
+		rowIndex++;
+		if (rowIndex >= rowList.length)
+			rowIndex = 0;	  
+		$timeout(rotateBeers, 3000);
+	}
+
 	$http.get('data/beers.json').success(function(data) {
 		console.log("load beers");
 		var beers = data.onTap;
@@ -72,29 +85,17 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		});
 		numberOfColumnms = data.displaySettings.numberOfColumns;
 		numberOfRows = data.displaySettings.numberOfRows;
-		var row = $scope.nextRow(beers, numberOfColumnms);
+		var row = nextRow(beers, numberOfColumnms);
 		while(row.length > 0){
 			rowList.push(row);
-			row = $scope.nextRow(beers, numberOfColumnms);
+			row = nextRow(beers, numberOfColumnms);
 		}
 		$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
 		// $scope.beerRows = displayBeers($scope.beers, $scope.numberOfRows, $scope.numberOfColumnms);
-		setInterval(function(){
-        	$scope.$apply(function() {  
-        		var row = rowList.slice(rowIndex, rowIndex+1);      		
-        		var tempArray = $scope.beerRows;
-				tempArray.unshift(row);
-				tempArray.pop();
-				$scope.beerRows = tempArray;
-				if (rowIndex>=rowList.length)
-					rowIndex=0;
-				else
-					rowIndex++;
-        	});
-    	}, 3000);		
-	});
+	    $timeout(rotateBeers, 6000);
+		init();		
+    });
 
-	$scope.init();
 }
 
 beerMenuApp.controller('BeerMenuCtrl', BeerMenuCtrl);

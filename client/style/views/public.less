@@ -1,12 +1,25 @@
-.slide.ng-enter > div,
-.slide.ng-leave > div {
-  -webkit-transition:0.5s linear all;
-  -moz-transition:0.5s linear all;
-  -o-transition:0.5s linear all;
-  transition:0.5s linear all;
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move {
+  -webkit-transition:all linear 1.0s;
+  -moz-transition:all linear 1.0s;
+  -o-transition:all linear 1.0s;
+  transition:all linear 1.0s;
 }
  
-.slide.ng-enter { }        /* starting animations for enter */
-.slide.ng-enter-active { } /* terminal animations for enter */
-.slide.ng-leave { }        /* starting animations for leave */
-.slide.ng-leave-active { } /* terminal animations for leave */
+.animate-repeat.ng-enter {
+  opacity:0;
+}
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+}
+ 
+.animate-repeat.ng-leave {
+  opacity:1;
+}
+.animate-repeat.ng-leave.ng-leave-active {
+  opacity:0;
+}
+ 
+.animate-repeat.ng-move { }
+.animate-repeat.ng-move.ng-move-active { }
