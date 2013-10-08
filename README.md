@@ -19,7 +19,9 @@ To compile less files
 === APIs Used ===
 
 Restify => http://mcavage.me/node-restify
+
 BreweryDB => http://www.brewerydb.com/developers/docs
+API key for beermenu (a7ce9c08e84cecee7b2ca2f680e9494a) has been approved
 
 === Style Links ===
 http://purecss.io/grids/
