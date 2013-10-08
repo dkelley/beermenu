@@ -74,7 +74,7 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		rowIndex++;
 		if (rowIndex >= rowList.length)
 			rowIndex = 0;	  
-		$timeout(rotateBeers, 3000);
+		$timeout(rotateBeers, 5000);
 	}
 
 	$http.get('data/beers.json').success(function(data) {
@@ -92,7 +92,7 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		}
 		$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
 		// $scope.beerRows = displayBeers($scope.beers, $scope.numberOfRows, $scope.numberOfColumnms);
-	    $timeout(rotateBeers, 6000);
+	    $timeout(rotateBeers, 10000);
 		init();		
     });
 
