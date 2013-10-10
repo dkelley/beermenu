@@ -22,32 +22,24 @@
     <!-- CSS -->
     <link href="style/public.css" type="text/css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
-    <script src="http://code.angularjs.org/1.2.0-rc.2/angular-animate.js"></script>
+    <script src="js/angular-1.2.0-rc.2/angular.js"></script>
+    <script src="js/angular-1.2.0-rc.2/angular-animate.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/beermenu.js"></script>
 </head>
 <body ng-app="beerMenuApp">
-    <div class="container">
+    <div header style="width: 100%; height: 75px; background: black; z-index: 9999;position: fixed; top: 0px">
+        Kelly's
+    </div>
+    <div class="container" style="z-index: -1">
     <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0"  ng-controller="BeerMenuCtrl">
-        <thead>
-            <tr>
-                <th colspan="">
-                    <h1>Kelly&#8217;s Beer Menu</h1>
-                </th>
-                <th>
-                    <h1>On Tap</h1>
-                </th>
-            </tr>
-        </thead>
-
         <tbody>
-            <tr class="animate-repeat" ng-repeat="beerRow in beerRows">
-                <td class="beerRow" ng-repeat="beer in beerRow">
+            <tr class="row" ng-repeat="beerRow in beerRows">
+                <td class="beer" ng-repeat="beer in beerRow">
                     <div class="pure-g-r">
-                        <div class="pure-u-1-6">
+                        <!--div class="pure-u-1-6">
                             <img ng-src="{{beer.labels.large | imageexists }}" alt="{{beer.name}} label" width="100%" />
-                        </div>
+                        </div -->
                         <div class="pure-u-5-6">
                             <div class="beerCopy">
                                 <h3>{{beer.name}}</h3>

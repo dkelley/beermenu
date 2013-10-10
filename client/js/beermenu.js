@@ -74,25 +74,28 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		rowIndex++;
 		if (rowIndex >= rowList.length)
 			rowIndex = 0;	  
-		$timeout(rotateBeers, 5000);
+		$timeout(rotateBeers, 3000);
 	}
 
 	$http.get('data/beers.json').success(function(data) {
-		console.log("load beers");
+		console.log("loaded beers");
 		var beers = data.onTap;
 		beers.sort(function(a,b){
 			return a.name < b.name
 		});
 		numberOfColumnms = data.displaySettings.numberOfColumns;
 		numberOfRows = data.displaySettings.numberOfRows;
+		console.log("settings", data.displaySettings);
+		console.log("numberOfRows", numberOfRows);
 		var row = nextRow(beers, numberOfColumnms);
+
 		while(row.length > 0){
 			rowList.push(row);
 			row = nextRow(beers, numberOfColumnms);
 		}
 		$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
 		// $scope.beerRows = displayBeers($scope.beers, $scope.numberOfRows, $scope.numberOfColumnms);
-	    $timeout(rotateBeers, 10000);
+	    $timeout(rotateBeers, 3000);
 		init();		
     });
 

@@ -1627,23 +1627,24 @@ table.beerTable .style {
   top: 24px;
   font-size: 14px;
 }
-.animate-repeat.ng-enter,
-.animate-repeat.ng-leave,
-.animate-repeat.ng-move {
-  -webkit-transition: all linear 1.0s;
-  -moz-transition: all linear 1.0s;
-  -o-transition: all linear 1.0s;
-  transition: all linear 1.0s;
+/* ==========================================================================
+   PUBLIC CUSTOM STYLES
+   ========================================================================== */
+.row.ng-enter,
+.row.ng-leave {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
-.animate-repeat.ng-enter {
+.row.ng-enter,
+.row.ng-leave.ng-leave-active {
+  line-height: 0;
   opacity: 0;
+  display: block;
 }
-.animate-repeat.ng-enter.ng-enter-active {
+.row.ng-leave,
+.row.ng-enter.ng-enter-active {
+  line-height: 1;
   opacity: 1;
-}
-.animate-repeat.ng-leave {
-  opacity: 1;
-}
-.animate-repeat.ng-leave.ng-leave-active {
-  opacity: 0;
 }
