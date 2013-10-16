@@ -21,17 +21,17 @@
 
     <!-- CSS -->
     <link href="style/public.css" type="text/css" rel="stylesheet" />
-    <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/angular-1.2.0-rc.2/angular.js"></script>
     <script src="js/angular-1.2.0-rc.2/angular-animate.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/beermenu.js"></script>
 </head>
 <body ng-app="beerMenuApp">
-    <div header style="width: 100%; height: 75px; background: black; z-index: 9999;position: fixed; top: 0px">
+    <div header style="width: 100%; height: 75px; background: black; position: fixed; top: 0px">
         Kelly's
     </div>
-    <div class="container" style="z-index: -1">
+    <div class="container">
     <!-- height="100%" width="100%" -->
     <table class="beerTable pure-table" cellpadding="0" cellspacing="0"  ng-controller="BeerMenuCtrl">
         <tbody>
@@ -39,7 +39,7 @@
                 <td class="beer" ng-repeat="beer in beerRow">
                     <div class="pure-g-r">
                         <div class="pure-u-1-6">
-                            <img ng-src="{{beer.labels.large | imageexists }}" alt="{{beer.name}} label" width="100%" />
+                            <img ng-src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" />
                         </div>
                         <div class="pure-u-5-6">
                             <div class="beerCopy">

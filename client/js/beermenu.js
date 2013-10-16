@@ -41,10 +41,8 @@ var beerMenuApp = angular.module('beerMenuApp',['beerMenuFilters','ngAnimate']);
 function BeerMenuCtrl($scope, $http, $timeout) {
 	$scope.predicate = '-name';
 	$scope.beerRows = [];
-	var numberOfColumnms = 3;
-	//var numberOfRows = 4;
-	//var rowIndex = 0;
-	//var rowList = [];
+	var beerList = [];
+	var defaultNumberOfColumnms = 3;
 
 	var init = function () {
         // basic setup
@@ -58,6 +56,12 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		for (var col=0;col<numberOfColumnms;col++){
 			if (beers.length > 0){
 				var beer = beers.pop();
+				if (beer && !beer.labels)
+					beer.labels = {};
+				if (beer && !beer.labels.large){
+			  		var randomnumber=Math.floor(Math.random()*3)
+  					beer.labels.large = "img/labels/beerlabel" + randomnumber + ".jpg";
+				}
 				row.push(beer);
 			}			
 		}
@@ -65,15 +69,8 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 	};
 
 	var rotateBeers = function(){
-		var newRows = rowList.slice(rowIndex, rowIndex+1);      		
-		if (newRows.length == 1){
-			console.log("updating ", rowIndex, newRows[0]);
-			$scope.beerRows.pop();
-			$scope.beerRows.unshift(newRows[0]);			
-		}
-		rowIndex++;
-		if (rowIndex >= rowList.length)
-			rowIndex = 0;	  
+		var row = $scope.beerRows.pop();
+		$scope.beerRows.unshift(row);
 		$timeout(rotateBeers, 3000);
 	}
 
@@ -83,18 +80,19 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		beers.sort(function(a,b){
 			return a.name < b.name
 		});
-		// numberOfColumnms = data.displaySettings.numberOfColumns;
+		numberOfColumnms = data.displaySettings.numberOfColumns ? data.displaySettings.numberOfColumns : defaultNumberOfColumnms;
 		// numberOfRows = data.displaySettings.numberOfRows;
 		// console.log("settings", data.displaySettings);
 		// console.log("numberOfRows", numberOfRows);
 		var row = nextRow(beers, numberOfColumnms);
 
 		while(row.length > 0){
-			rowList.push(row);
+			beerList.push(row);
 			row = nextRow(beers, numberOfColumnms);
 		}
-		$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
+		//$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
 		// $scope.beerRows = displayBeers($scope.beers, $scope.numberOfRows, $scope.numberOfColumnms);
+		$scope.beerRows = beerList;
 	    $timeout(rotateBeers, 5000);
 		init();		
     });
