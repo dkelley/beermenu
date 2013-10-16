@@ -42,9 +42,9 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 	$scope.predicate = '-name';
 	$scope.beerRows = [];
 	var numberOfColumnms = 3;
-	var numberOfRows = 4;
-	var rowIndex = 0;
-	var rowList = [];
+	//var numberOfRows = 4;
+	//var rowIndex = 0;
+	//var rowList = [];
 
 	var init = function () {
         // basic setup
@@ -83,10 +83,10 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		beers.sort(function(a,b){
 			return a.name < b.name
 		});
-		numberOfColumnms = data.displaySettings.numberOfColumns;
-		numberOfRows = data.displaySettings.numberOfRows;
-		console.log("settings", data.displaySettings);
-		console.log("numberOfRows", numberOfRows);
+		// numberOfColumnms = data.displaySettings.numberOfColumns;
+		// numberOfRows = data.displaySettings.numberOfRows;
+		// console.log("settings", data.displaySettings);
+		// console.log("numberOfRows", numberOfRows);
 		var row = nextRow(beers, numberOfColumnms);
 
 		while(row.length > 0){
@@ -95,7 +95,7 @@ function BeerMenuCtrl($scope, $http, $timeout) {
 		}
 		$scope.beerRows = rowList.slice(0, rowIndex+=numberOfRows);
 		// $scope.beerRows = displayBeers($scope.beers, $scope.numberOfRows, $scope.numberOfColumnms);
-	    $timeout(rotateBeers, 3000);
+	    $timeout(rotateBeers, 5000);
 		init();		
     });
 

@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: @fontHeadlines;
 }
 
+/*
 table.beerTable {
     height: 100%;
     width: 100%;
@@ -101,6 +102,48 @@ table.beerTable {
     }
 
 }
+*/
+
+
+table.beerTable {
+    border-collapse:collapse;
+    border: 0;
+    color: #fff;
+
+    thead {
+        background: none;
+    }
+
+    thead tr > th {
+        vertical-align: middle;
+        font-family: @fontHeadlines;
+        height: 60px;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+    }
+
+    tbody tr > td {
+        border: 0;
+        vertical-align: top;
+    }
+
+    h3 {
+        margin: 0 0 3px 0;
+        font-family: @fontBody;
+        font-weight: 100;
+    }
+
+    .beerCopy {
+        padding: 0 40px 0 12px;
+    }
+
+    .style {
+        font-size: 14px;
+        color: #ccc;
+    }
+
+}
+
 #background {
     position: absolute;
     right: 20px;

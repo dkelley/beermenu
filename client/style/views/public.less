@@ -4,20 +4,29 @@
    ========================================================================== */
 
 
+.row {
+	height: 150px;
+}
+
 .row.ng-enter, .row.ng-leave {
-  -webkit-transition: all 1.0s ease-in-out;
-  -moz-transition: all 1.0s ease-in-out;
-  -o-transition: all 1.0s ease-in-out;
-  transition: all 1.0s ease-in-out;
+  -webkit-transition: height 2.0s ease-in-out;
+  -moz-transition: height 2.0s ease-in-out;
+  -o-transition: height 2.0s ease-in-out;
+  transition: height 2.0s ease-in-out;
 }
 
-.row.ng-enter, .row.ng-leave.ng-leave-active {
-  line-height: 0;
-  opacity: 0;
-  display: block;
+.row.ng-enter{
+  height: 0px;
 }
 
-.row.ng-leave, .row.ng-enter.ng-enter-active {
-  line-height: 1;
-  opacity: 1;
+.row.ng-enter.ng-enter-active {
+	height: 150px;	
+}
+
+.row.ng-leave {
+  height: 0px;
+}
+
+.row.ng-leave.ng-leave-active {
+	height: 0px;
 }
