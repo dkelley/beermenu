@@ -11,8 +11,8 @@ angular.module('beerMenuApp', [
   'beerMenu.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/beerlist/:pageNumber', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
-  $routeProvider.when('/specials/:pageNumber', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
+  $routeProvider.when('/beerlist/:page', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
+  $routeProvider.when('/specials/:page', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
   $routeProvider.otherwise({redirectTo: '/beerlist/1'});
 }]);
 

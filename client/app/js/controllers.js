@@ -2,7 +2,8 @@
 
 /* Controllers */
 angular.module('beerMenu.controllers', []).
-  controller('BeerList', ['$scope', '$http', '$timeout', 'beerListService', function($scope, $http, $timeout, beerListService){
+  controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams', '$route', 'beerListService', function($scope, $http, $timeout, $routeParams, $route, beerListService){
+  	console.log("page:" + $routeParams.page);
   	beerListService.loadBar('kellys', function(bar){
   		$scope.bar = bar;
   		console.log("Found " + bar.onTap.length + " beers");
