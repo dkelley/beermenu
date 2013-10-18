@@ -2,15 +2,18 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('beerMenuApp', [
   'ngRoute',
+  'ngAnimate',
   'beerMenu.filters',
   'beerMenu.services',
   'beerMenu.directives',
   'beerMenu.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/beers/{pageNumber}', {templateUrl: 'partials/beer.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/specials/{pageNumber}', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/beerlist/:pageNumber', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
+  $routeProvider.when('/specials/:pageNumber', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
+  $routeProvider.otherwise({redirectTo: '/beerlist/1'});
 }]);
+
+

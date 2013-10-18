@@ -1,4 +1,4 @@
-angular.module('beerMenuFilters', []).filter('imageexists', function() {
+angular.module('beerMenu.filters', []).filter('imageexists', function() {
   return function(input) {
   	if (input)
   		return input;

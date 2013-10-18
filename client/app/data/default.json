@@ -1,5 +1,5 @@
 {
-	"name": "Kelly's Taproom",
+	"name": "Default Taproom",
 	"url":"kellysbrynmawr",
 	"displaySettings": {
 		"numberOfColumns" : 3,
@@ -145,81 +145,6 @@
 				"statusDisplay" : "Verified",
 				"createDate" : "2012-01-03 02:41:45",
 				"updateDate" : "2013-08-14 19:18:55"
-			},
-			"type" : "beer"
-		},
-		{
-			"id" : "jfaN0S",
-			"name" : "Shiner Bock",
-			"description" : "Bock reflects the tradition of genuine Bavarian beers as a brew only a craftsman like Kosmos Spoetzl, trained in the OldCountry, could bring to life. With its deep amber color, distinctive rich flavor and full body, Shiner Bock demonstrates the care of a handcrafted brewing process to bring forth a mellow taste free of the bitter aftertaste found in many micro, specialty and imported beers. Just think of it as Shiner smooth.",
-			"abv" : "4.4",
-			"ibu" : "13",
-			"glasswareId" : 5,
-			"srmId" : 18,
-			"availableId" : 1,
-			"styleId" : 88,
-			"isOrganic" : "N",
-			"labels" : {
-				"icon" : "https://s3.amazonaws.com/brewerydbapi/beer/jfaN0S/upload_KQME4s-icon.png",
-				"medium" : "https://s3.amazonaws.com/brewerydbapi/beer/jfaN0S/upload_KQME4s-medium.png",
-				"large" : "https://s3.amazonaws.com/brewerydbapi/beer/jfaN0S/upload_KQME4s-large.png"
-			},
-			"status" : "verified",
-			"statusDisplay" : "Verified",
-			"createDate" : "2012-01-03 02:44:12",
-			"updateDate" : "2013-08-11 19:25:52",
-			"glass" : {
-				"id" : 5,
-				"name" : "Pint",
-				"createDate" : "2012-01-03 02:41:33"
-			},
-			"srm" : {
-				"id" : 18,
-				"name" : "18",
-				"hex" : "A63E00"
-			},
-			"available" : {
-				"id" : 1,
-				"name" : "Year Round",
-				"description" : "Available year round as a staple beer."
-			},
-			"style" : {
-				"id" : 88,
-				"categoryId" : 7,
-				"category" : {
-					"id" : 7,
-					"name" : "European-germanic Lager",
-					"createDate" : "2012-03-21 20:06:46"
-				},
-				"name" : "Traditional German-Style Bock",
-				"description" : "Traditional bocks are made with all malt and are strong, malty, medium- to full-bodied, bottom-fermented beers with moderate hop bitterness that should increase proportionately with the starting gravity. Malt character should be a balance of sweetness and toasted/nut-like malt; not caramel. Hop flavor should be low and hop aroma should be very low. Bocks can range in color from deep copper to dark brown. Fruity esters should be minimal. Diacetyl should be absent.",
-				"ibuMin" : "20",
-				"ibuMax" : "30",
-				"abvMin" : "6.3",
-				"abvMax" : "7.5",
-				"srmMin" : "20",
-				"srmMax" : "30",
-				"ogMin" : "1.066",
-				"fgMin" : "1.018",
-				"fgMax" : "1.024",
-				"createDate" : "2012-03-21 20:06:46"
-			},
-			"brewery" : {
-				"id" : "f35hQR",
-				"name" : "Spoetzl Brewery",
-				"description" : "Spoetzl was founded in 1909, and claims to be the oldest independent brewery in Texas. A group of businessmen incorporated Shiner Brewing Association and placed Herman Weiss in as the company's first brewmaster. In 1914 a German immigrant brewer named Kosmas (or Kosmos) Spoetzl co-leased with Oswald Petzold with an option to buy in 1915. Spoetzl had attended brewmaster's school and apprenticed for three years in Germany, worked for eight years at the Pyramids Brewery in Cairo, Egypt, and then worked in Canada. He moved to San Antonio in search of a better climate for his health, bringing with him a family recipe for a Bavarian beer made from malted barley and hops.",
-				"website" : "http://www.shiner.com/",
-				"established" : "1909",
-				"isOrganic" : "N",
-				"images" : {
-					"icon" : "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-icon.png",
-					"medium" : "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-medium.png",
-					"large" : "https://s3.amazonaws.com/brewerydbapi/brewery/f35hQR/upload_8SElvW-large.png"
-				},
-				"status" : "verified",
-				"statusDisplay" : "Verified",
-				"createDate" : "2012-01-03 02:42:08",
-				"updateDate" : "2013-08-14 01:01:13"
 			},
 			"type" : "beer"
 		},
