@@ -17,3 +17,16 @@ config(['$routeProvider', function($routeProvider) {
 }]);
 
 
+angular.module('beerMenuAdmin', [
+  'ngRoute',
+  'ngAnimate',
+  'beerMenu.filters',
+  'beerMenu.services',
+  'beerMenu.directives',
+  'beerMenu.controllers'
+]).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/admin', {templateUrl: 'partials/admin/beerlist.html', controller: 'Admin'});
+  $routeProvider.otherwise({redirectTo: '/admin'});
+}]);
+
