@@ -1,0 +1,216 @@
+[{
+      "id" : "UEHHoX",
+      "active": true,
+      "name" : "All Day IPA",
+      "active" : true,
+      "description" : "The beer you've been waiting for. Keeps your taste satisfied while keeping your senses sharp. An all-day IPA naturally brewed with a complex array of malts, grains and hops. Balanced for optimal aromatic and a clean finish. The perfect reward for an honest day's work and the ultimate companion to celebrate life's simple pleasures.",
+      "abv" : "4.7",
+      "ibu" : "42",
+      "glasswareId" : 5,
+      "availableId" : 1,
+      "styleId" : 30,
+      "isOrganic" : "N",
+      "labels" : {
+        "icon" : "https://s3.amazonaws.com/brewerydbapi/beer/UEHHoX/upload_dtPhgy-icon.png",
+        "medium" : "https://s3.amazonaws.com/brewerydbapi/beer/UEHHoX/upload_dtPhgy-medium.png",
+        "large" : "https://s3.amazonaws.com/brewerydbapi/beer/UEHHoX/upload_dtPhgy-large.png"
+      },
+      "status" : "verified",
+      "statusDisplay" : "Verified",
+      "createDate" : "2012-01-03 02:42:39",
+      "updateDate" : "2013-05-12 12:53:24",
+      "glass" : {
+        "id" : 5,
+        "name" : "Pint",
+        "createDate" : "2012-01-03 02:41:33"
+      },
+      "available" : {
+        "id" : 1,
+        "name" : "Year Round",
+        "description" : "Available year round as a staple beer."
+      },
+      "style" : {
+        "id" : 30,
+        "categoryId" : 3,
+        "category" : {
+          "id" : 3,
+          "name" : "North American Origin Ales",
+          "createDate" : "2012-03-21 20:06:45"
+        },
+        "name" : "American-Style India Pale Ale",
+        "description" : "American-style India pale ales are perceived to have medium-high to intense hop bitterness, flavor and aroma with medium-high alcohol content. The style is further characterized by floral, fruity, citrus-like, piney, resinous, or sulfur-like American-variety hop character. Note that one or more of these American-variety hop characters is the perceived end, but the hop characters may be a result of the skillful use of hops of other national origins. The use of water with high mineral content results in a crisp, dry beer. This pale gold to deep copper-colored ale has a full, flowery hop aroma and may have a strong hop flavor (in addition to the perception of hop bitterness). India pale ales possess medium maltiness which contributes to a medium body. Fruity-ester flavors and aromas are moderate to very strong. Diacetyl can be absent or may be perceived at very low levels. Chill and/or hop haze is allowable at cold temperatures. (English and citrus-like American hops are considered enough of a distinction justifying separate American-style IPA and English-style IPA categories or subcategories. Hops of other origins may be used for bitterness or approximating traditional American or English character. See English-style India Pale Ale",
+        "ibuMin" : "50",
+        "ibuMax" : "70",
+        "abvMin" : "6.3",
+        "abvMax" : "7.5",
+        "srmMin" : "6",
+        "srmMax" : "14",
+        "ogMin" : "1.06",
+        "fgMin" : "1.012",
+        "fgMax" : "1.018",
+        "createDate" : "2012-03-21 20:06:45"
+      },
+      "brewery" : {
+        "id" : "Idm5Y5",
+        "name" : "Founders Brewing Company",
+        "active" : true,
+        "description" : "Founders Brewing Company, founded by Mike Stevens and Dave Engbers produced its first beer in November of 1997. Built out of a dream and a passion for home brewing, what started out as a hobby quickly became a thriving business.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer.\r\n\r\nCarving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer. Carving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.",
+        "website" : "http://www.foundersbrewing.com/",
+        "established" : "1997",
+        "isOrganic" : "N",
+        "images" : {
+          "icon" : "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-icon.png",
+          "medium" : "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-medium.png",
+          "large" : "https://s3.amazonaws.com/brewerydbapi/brewery/Idm5Y5/upload_5gYn8V-large.png"
+        },
+        "status" : "verified",
+        "statusDisplay" : "Verified",
+        "createDate" : "2012-01-03 02:41:55",
+        "updateDate" : "2012-09-11 19:30:21"
+      },
+      "type" : "beer"
+    },
+    {
+      "id" : "Kk1Cyr",
+      "name" : "Two Hearted Ale",
+      "active" : true,
+      "description" : "Bell's Two Hearted Ale is defined by its intense hop aroma and malt balance. Hopped exclusively with the Centennial hop varietal from the Pacific Northwest, massive additions in the kettle and again in the fermenter lend their characteristic grapefruit and pine resin aromas. A significant malt body balances this hop presence; together with the signature fruity aromas of Bell's house yeast, this leads to a remarkably drinkable American-style India Pale Ale.",
+      "abv" : "7",
+      "glasswareId" : 5,
+      "availableId" : 1,
+      "styleId" : 30,
+      "isOrganic" : "N",
+      "labels" : {
+        "icon" : "https://s3.amazonaws.com/brewerydbapi/beer/Kk1Cyr/upload_p4loMh-icon.png",
+        "medium" : "https://s3.amazonaws.com/brewerydbapi/beer/Kk1Cyr/upload_p4loMh-medium.png",
+        "large" : "https://s3.amazonaws.com/brewerydbapi/beer/Kk1Cyr/upload_p4loMh-large.png"
+      },
+      "status" : "verified",
+      "statusDisplay" : "Verified",
+      "foodPairings" : "Two Hearted Ale is a great multi-tasker with enough citrus and bright flavors during the warmer months, but also enough body, mouth-feel and depth for cooler months. Great with bright-flavored dishes that contain citrus or cilantro, spices like coriander and cumin, or strong spicy dishes. Curry is a must. Great with ground beef tacos but also ceviche or bacon wrapped frog legs.\r\n\r\nFor dessert, pair with carrot cake, caramel apple tart, ginger spice cake or persimmon rice pudding.\r\n\r\nPairs well with cheeses like aged Mammoth cheddar, EMMI Le Gruyere, Blue Costello, Cambanzola, Gorgonzola, 3-year-old Grafton, Trader Joe's Goat Milk Brie (with the rind) or Cotswold with herbs.",
+      "originalGravity" : "1.064",
+      "createDate" : "2012-01-03 02:44:25",
+      "updateDate" : "2013-08-14 18:31:24",
+      "glass" : {
+        "id" : 5,
+        "name" : "Pint",
+        "createDate" : "2012-01-03 02:41:33"
+      },
+      "available" : {
+        "id" : 1,
+        "name" : "Year Round",
+        "description" : "Available year round as a staple beer."
+      },
+      "style" : {
+        "id" : 30,
+        "categoryId" : 3,
+        "category" : {
+          "id" : 3,
+          "name" : "North American Origin Ales",
+          "createDate" : "2012-03-21 20:06:45"
+        },
+        "name" : "American-Style India Pale Ale",
+        "description" : "American-style India pale ales are perceived to have medium-high to intense hop bitterness, flavor and aroma with medium-high alcohol content. The style is further characterized by floral, fruity, citrus-like, piney, resinous, or sulfur-like American-variety hop character. Note that one or more of these American-variety hop characters is the perceived end, but the hop characters may be a result of the skillful use of hops of other national origins. The use of water with high mineral content results in a crisp, dry beer. This pale gold to deep copper-colored ale has a full, flowery hop aroma and may have a strong hop flavor (in addition to the perception of hop bitterness). India pale ales possess medium maltiness which contributes to a medium body. Fruity-ester flavors and aromas are moderate to very strong. Diacetyl can be absent or may be perceived at very low levels. Chill and/or hop haze is allowable at cold temperatures. (English and citrus-like American hops are considered enough of a distinction justifying separate American-style IPA and English-style IPA categories or subcategories. Hops of other origins may be used for bitterness or approximating traditional American or English character. See English-style India Pale Ale",
+        "ibuMin" : "50",
+        "ibuMax" : "70",
+        "abvMin" : "6.3",
+        "abvMax" : "7.5",
+        "srmMin" : "6",
+        "srmMax" : "14",
+        "ogMin" : "1.06",
+        "fgMin" : "1.012",
+        "fgMax" : "1.018",
+        "createDate" : "2012-03-21 20:06:45"
+      },
+      "brewery" : {
+        "id" : "noGtDY",
+        "name" : "Bell's Brewery, Inc.",
+        "description" : "Bell's Brewery, Inc. began in 1985 with a quest for better beer and a 15 gallon soup kettle. Since then, we've grown into a regional craft brewery that employs more than 200 people over an 18 state area, in addition to Puerto Rico and Washington DC. The dedication to brewing flavorful, unfiltered, quality craft beers that started in 1985 is still with us today. We currently brew over 20 beers for distribution as well as many other small batch beers that are served at our pub in Kalamazoo, the Eccentric Cafe. Our ongoing goal is to brew thoughtfully, creatively and artistically. We strive to bring an authentic and pleasant experience to all of our customers through our unique ales and beers.",
+        "website" : "http://www.bellsbeer.com/",
+        "established" : "1985",
+        "isOrganic" : "N",
+        "images" : {
+          "icon" : "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-icon.png",
+          "medium" : "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-medium.png",
+          "large" : "https://s3.amazonaws.com/brewerydbapi/brewery/noGtDY/upload_t0bnSw-large.png"
+        },
+        "status" : "verified",
+        "statusDisplay" : "Verified",
+        "createDate" : "2012-01-03 02:41:45",
+        "updateDate" : "2013-08-14 19:18:55"
+      },
+      "type" : "beer"
+    },
+    {
+      "id" : "28clVi",
+      "name" : "Exit 4",
+      "active" : true,
+      "description" : "This inspired Belgian-style Trippel has a hazy golden hue and the aroma of citrus with hints of banana and clove. Predominant Belgian malt flavors give way to a subdued bitterness in the finish. Winner of a Gold Medal at the 2009 Great American Beer Festival and named by Mens Journal as best Belgian beer brewed in America for 2009.",
+      "abv" : "10.2",
+      "ibu" : "23.8",
+      "glasswareId" : 5,
+      "availableId" : 1,
+      "styleId" : 59,
+      "isOrganic" : "N",
+      "labels" : {
+        "icon" : "https://s3.amazonaws.com/brewerydbapi/beer/28clVi/upload_4lO6ZC-icon.png",
+        "medium" : "https://s3.amazonaws.com/brewerydbapi/beer/28clVi/upload_4lO6ZC-medium.png",
+        "large" : "https://s3.amazonaws.com/brewerydbapi/beer/28clVi/upload_4lO6ZC-large.png"
+      },
+      "status" : "verified",
+      "statusDisplay" : "Verified",
+      "foodPairings" : "Delicious when paired with a fish, roasted vegetables, shrimp, and strong cheeses.",
+      "originalGravity" : "1.1",
+      "createDate" : "2012-01-03 02:43:11",
+      "updateDate" : "2012-06-13 11:37:21",
+      "glass" : {
+        "id" : 5,
+        "name" : "Pint",
+        "createDate" : "2012-01-03 02:41:33"
+      },
+      "available" : {
+        "id" : 1,
+        "name" : "Year Round",
+        "description" : "Available year round as a staple beer."
+      },
+      "style" : {
+        "id" : 59,
+        "categoryId" : 5,
+        "category" : {
+          "id" : 5,
+          "name" : "Belgian And French Origin Ales",
+          "createDate" : "2012-03-21 20:06:46"
+        },
+        "name" : "Belgian-Style Tripel",
+        "description" : "Tripels are often characterized by a complex, sometimes mild spicy character. Clove-like phenolic flavor and aroma may be evident at extremely low levels. Yeast-generated  fruity esters, including banana, are also common, but not necessary. These pale/light-colored ales may finish sweet, though any sweet finish should be light. The beer is characteristically medium and clean in body with an equalizing hop/malt balance and a perception of medium to medium high hop bitterness. Traditional Belgian Tripels are often well attenuated. Brewing sugar may be used to lighten the perception of body. Its sweetness will come from very pale malts. There should not be character from any roasted or dark malts. Low hop flavor is acceptable. Alcohol strength and flavor should be perceived as evident. Head retention is dense and mousse-like. Chill haze is acceptable at low serving temperatures. Traditional Tripels are bottle conditioned, may exhibit slight yeast haze but the yeast should not be intentionally roused. Oxidative character if evident in aged Tripels should be mild and pleasant.",
+        "ibuMin" : "20",
+        "ibuMax" : "45",
+        "abvMin" : "7",
+        "abvMax" : "10",
+        "srmMin" : "4",
+        "srmMax" : "9",
+        "ogMin" : "1.07",
+        "fgMin" : "1.01",
+        "fgMax" : "1.018",
+        "createDate" : "2012-03-21 20:06:46"
+      },
+      "brewery" : {
+        "id" : "M5zcKb",
+        "name" : "Flying Fish Brewing Company",
+        "active" : true,
+        "description" : "When Gene Muller founded Flying Fish Brewing Co. in 1995, he did so first on the World Wide Web - making it the world's first virtual microbrewery. That early Web site helped generate positive press coverage and helped attract the investors needed to make the virtual brewery a real one. Muller said the idea was to make the Web site “This Old House meets the World Wide Web”—letting people go behind the taps and see the thousands of details needed to put a microbrewery together.\r\n\r\nHe also wanted to give beer lovers a chance, via their computers, to roll up their cyber-sleeves and help build the brewery. The site let beer lovers help select and name beers, design t-shirts and labels, volunteer to be a taste-tester and even apply for a job as a brewer. Visitors to the Web site can sign up for FlyingFishMail a monthly e-mail newsletter which now boasts more than 12,000 subscribers.\r\n\r\nMuller, who got into the brewing field to become a brewer, trained at Chicago's Siebel Institute of Technology, America's oldest brewing school. He quickly realized someone was going to have to run the day-to-day business of the brewery and now serves as President and Head Janitor (though not necessarily in that order).\r\n\r\nFlying Fish Brewing Company is located in Cherry Hill, New Jersey, approximately seven miles east of Philadelphia. In a state that once boasted 50 breweries, it is the first microbrewery in Southern New Jersey and the first new brewery built in that part of the state in more than half a century. From its opening in late 1996, Flying Fish has tripled its capacity and become the largest of the approximately 20 craft breweries in the state.",
+        "website" : "http://www.flyingfish.com/",
+        "established" : "1995",
+        "isOrganic" : "N",
+        "images" : {
+          "icon" : "https://s3.amazonaws.com/brewerydbapi/brewery/M5zcKb/upload_5NqI1c-icon.png",
+          "medium" : "https://s3.amazonaws.com/brewerydbapi/brewery/M5zcKb/upload_5NqI1c-medium.png",
+          "large" : "https://s3.amazonaws.com/brewerydbapi/brewery/M5zcKb/upload_5NqI1c-large.png"
+        },
+        "status" : "verified",
+        "statusDisplay" : "Verified",
+        "createDate" : "2012-01-03 02:41:55",
+        "updateDate" : "2013-02-27 12:50:39"
+      },
+      "type" : "beer"
+    }]

@@ -1,0 +1,25 @@
+<div class="pure-g-r admin" ng-controller="AdminBeerList">
+  <div class="pure-u-1">
+        <span ng-bind-template="Showing {{(beers|filter:query).length}} of {{beers.length}}"></span>
+  </div>
+  <div class="pure-u-1">
+    <!--Sidebar content-->
+    Filter: <input ng-model="query">
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="abv">ABV</option>
+    </select>      
+  </div>
+  <div class="pure-u-1">
+    <!--Body content-->
+    <ul>
+        <li ng-repeat="beer in beers | filter:query | orderBy:orderProp" class="beer">
+            <button class="pure-button-primary" ng-disabled="!beer.active" ng-click="removeBeer(beer)">Remove</button>
+            {{beer.name}}, {{beer.breweries[0].name}} (ABV:{{beer.abv}})
+
+            <p style="display: none">{{beer.description}}</p>
+        </li>
+    </ul>
+  </div>
+</div>

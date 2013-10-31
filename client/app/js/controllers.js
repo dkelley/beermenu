@@ -1,10 +1,12 @@
 'use strict';
 
 /* Controllers */
-angular.module('beerMenu.controllers', []).
-  controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams', '$route', 'beerListService', function($scope, $http, $timeout, $routeParams, $route, beerListService){
+var beerMenuApp = angular.module('beerMenu.controllers', []);
+
+beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams', '$route', 'beerListService', function($scope, $http, $timeout, $routeParams, $route, beerListService){
   	console.log("page:" + $routeParams.page);
-  	beerListService.loadBar('kellys', function(bar){
+    console.log("bar:" + $routeParams.bar);
+  	beerListService.loadBar($routeParams.bar, function(bar){
   		$scope.bar = bar;
   		console.log("Found " + bar.onTap.length + " beers");
   		var numberOfColumns = bar.displaySettings.numberOfColumns ? bar.displaySettings.numberOfColumns : defaultNumberOfColumnms;
@@ -30,8 +32,8 @@ angular.module('beerMenu.controllers', []).
   .controller('Specials', [function() {
 
   }])
-  .controller('Admin', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
-    beerListService.loadBar('kellys', function(bar){
+  .controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
+    beerListService.loadBar($routeParams.barUrl, function(bar){
       $scope.bar = bar;
 
       var beers = bar.onTap;
@@ -39,5 +41,35 @@ angular.module('beerMenu.controllers', []).
         return a.name < b.name
       });
       $scope.beers = beers;
+
+      $scope.removeBeer = function(beer){
+        console.log("remove", beer);
+      }
+
     });
+  }])  
+  .controller('AdminBeerSearch', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
+
+    $scope.search = function(){
+      beerListService.search($scope.term, function(results){
+        var beers = results.sort(function(a,b){
+          return a.name < b.name
+        });
+        $scope.beerResults = beers;
+      });
+    }
+
+    $scope.activateBeer = function (beer){
+      console.log(beer);
+    }    
+  }])
+  .controller('AdminBeerMenu', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
+
+    $scope.user = {"username":"dkelley"};
+
+    $scope.init
+      beerListService.loadBar($routeParams.bar, function(bar){
+        $scope.barUrl = $bar.url;
+      });
+    
   }]);

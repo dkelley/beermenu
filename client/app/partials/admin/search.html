@@ -1,0 +1,18 @@
+<div class="pure-g-r admin">
+  <div class="pure-u-1">
+    Search: <input ng-model="term"><button class="btn btn-default btn-sm" ng-click="search()">Search</button>
+
+  </div>
+  <div class="pure-u-1">
+    <div ng-repeat="beer in beerResults">
+      <!--Body content-->
+      <div class="pure-u-3-4">
+        <h5 class="beer-name">{{beer.name}} <button class="pure-button-primary" ng-click="activateBeer(beer)">Activate</button></h5>
+        <h4 class="beer-details">>{{beer.style.name}} from {{beer.breweries[0].name}} ({{beer.abv}}%)</h4>
+        <p class="beer-desc">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        </p>        
+      </div>
+    </div>
+  </div>
+</div>

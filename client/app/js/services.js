@@ -11,16 +11,24 @@ angular.module('beerMenu.services', []).
 
 angular.module('beerMenu.services').provider('beerListService', function() {
 
-	this.name = 'Sample';
+	var that = this;
+	this.cache = {};
+
 
 	this.$get = function($http) {
-		var name = this.name;
 		return {
 			loadBar: function(barName, onSuccess){
-				$http.get('data/'+ barName + '.json').success(function(data) {
-					console.log("loaded bar", data.name);
-					onSuccess(data);
-			    });
+				console.log("loading ", barName);
+
+				if (that.cache[barName] == null){
+					$http.get('http://beermenu.ginger/app/' + barName).success(function(data) {
+						console.log("loaded bar", data.name);
+						that.cache[barName] = data;
+						onSuccess(data);
+				    });
+				}else{
+					return that.cache[barName];
+				}
 			},
 			loadRows: function(bar, numberOfColumns, beers){
 				var row = [];
@@ -45,6 +53,13 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 				}
 				console.log("beerRows " + beerRows.length);					
 				return beerRows;
+			},
+			search: function(term, onSuccess){
+				console.log("searching for", term);	
+				$http.get('http://beermenu.ginger/app/search/' + term).success(function(data) {
+					console.log("found ", data.length);
+					onSuccess(data);
+			    });
 			}
 		}
 	};

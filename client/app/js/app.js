@@ -11,9 +11,9 @@ angular.module('beerMenuApp', [
   'beerMenu.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/beerlist/:page', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
-  $routeProvider.when('/specials/:page', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
-  $routeProvider.otherwise({redirectTo: '/beerlist/1'});
+  $routeProvider.when('/:bar/beerlist/:page', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
+  $routeProvider.when('/:bar/specials/:page', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
+  $routeProvider.otherwise({redirectTo: '/unknown/beerlist/1'});
 }]);
 
 
@@ -26,7 +26,8 @@ angular.module('beerMenuAdmin', [
   'beerMenu.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/admin', {templateUrl: 'partials/admin/beerlist.html', controller: 'Admin'});
-  $routeProvider.otherwise({redirectTo: '/admin'});
+  $routeProvider.when('/:barUrl/list', {templateUrl: 'partials/admin/list.html', controller: 'AdminBeerList'});
+  $routeProvider.when('/:barUrl/search', {templateUrl: 'partials/admin/search.html', controller: 'AdminBeerSearch'});
+  $routeProvider.otherwise({redirectTo: '/kellysbrynmawr/list'});
 }]);
 
