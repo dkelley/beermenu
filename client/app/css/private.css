@@ -68,8 +68,6 @@ html {
   /* 1 */
 
   -ms-text-size-adjust: 100%;
-  /* 2 */
-
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -351,8 +349,6 @@ textarea {
   /* 2 */
 
   vertical-align: baseline;
-  /* 3 */
-
   *vertical-align: middle;
   /* 3 */
 
@@ -420,8 +416,6 @@ input[type="radio"] {
   /* 2 */
 
   *height: 13px;
-  /* 3 */
-
   *width: 13px;
   /* 3 */
 
@@ -1559,6 +1553,18 @@ striping:
 /* ==========================================================================
    GENERAL STYLES
    ========================================================================== */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
 * {
   font-weight: 400;
 }
@@ -1588,48 +1594,6 @@ h6 {
   font-weight: 400;
   font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
 }
-/*
-table.beerTable {
-    height: 100%;
-    width: 100%;
-    border-collapse:collapse;
-    border: 0;
-    color: #fff;
-
-    thead {
-        background: none;
-    }
-
-    thead tr > th {
-        vertical-align: middle;
-        font-family: @fontHeadlines;
-        height: 60px;
-        background-color: rgba(0,0,0,.5);
-        color: #fff;
-    }
-
-    tbody tr > td {
-        border: 0;
-        vertical-align: top;
-    }
-
-    h3 {
-        margin: 0 0 3px 0;
-        font-family: @fontBody;
-        font-weight: 100;
-    }
-
-    .beerCopy {
-        padding: 0 40px 0 12px;
-    }
-
-    .style {
-        font-size: 14px;
-        color: #ccc;
-    }
-
-}
-*/
 table.beerTable {
   border-collapse: collapse;
   border: 0;
@@ -1670,41 +1634,253 @@ table.beerTable .style {
 /* ==========================================================================
    GENERAL STYLES
    ========================================================================== */
-* {
-  font-weight: 400;
-}
 body {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  color: #333;
+  background: #fff;
 }
-html,
-body {
-  height: 100%;
-  font-family: "montserratregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+a {
+  text-decoration: none;
+  color: #1b98f8;
+}
+/* LAYOUT CSS */
+#layout {
+  padding-left: 500px;
+  /* "left col (nav + list)" width */
+
+  position: relative;
+}
+#nav,
+#list {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#nav {
+  margin-left: -500px;
+  /* "left col (nav + list)" width */
+
+  width: 150px;
+  background: #252a3a;
+  text-align: center;
+  padding: 2em 0;
+}
+#nav button {
+  white-space: normal;
+  margin: 0 .5em 1em .5em;
+  padding: .4em .25em .25em .25em;
+  line-height: 22px;
+}
+#list {
+  width: auto;
+  border-right: 1px solid #ddd;
+  right: 0;
+  left: 150px;
+  top: 0;
+}
+.sortBar {
+  position: fixed;
+  right: 0;
+  left: 150px;
+  height: 40px;
+  background: #f3f3f3;
+  padding: 14px 12px 0 12px;
+  width: auto;
+  border-bottom: 1px solid #ccc;
+}
+.pure-button-success {
+  background: #1cb841;
+  /* this is a green */
+
   color: #fff;
 }
-li {
-  list-style: none;
+/* HELPER CLASSES */
+.primary-button,
+.secondary-button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
-li.beer {
-  height: 50px;
+.primary-button {
+  color: #fff;
+  background: #1b98f8;
+  margin: 1em 0;
 }
-.beer-name {
+.secondary-button {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 0.5em 2em;
+  font-size: 80%;
+}
+/* Vertical Navigation Styles */
+#nav .pure-menu {
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+#nav .pure-menu a:hover,
+#nav .pure-menu a:focus,
+#nav .pure-menu a.active {
+  background: #373c5a;
+}
+#nav .pure-menu a {
+  color: #fff;
+  margin-left: 0.5em;
+}
+#nav .pure-menu-heading {
+  border-bottom: none;
+  font-size: 110%;
+  color: #4b7197;
+}
+#nav .nav-menu-button {
+  display: none;
+}
+.email-count {
+  color: #4b7197;
+}
+.email-label-personal,
+.email-label-work,
+.email-label-travel {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 0.5em;
+  border-radius: 3px;
+}
+.email-label-personal {
+  background: #ffc94c;
+}
+.email-label-work {
+  background: #41ccb4;
+}
+.email-label-travel {
+  background: #40c365;
+}
+/* Email Item Styles */
+.email-item {
+  padding: 0.9em 1em;
+  border-bottom: 1px solid #ddd;
+  border-left: 6px solid transparent;
+}
+.email-avatar {
+  border-radius: 3px;
+  margin-right: 0.5em;
+}
+.email-name,
+.email-subject {
+  margin: 0;
+}
+.email-name {
   text-transform: uppercase;
   color: #999;
 }
-h5 {
-  font-size: .83em;
-  margin: 1.67em 0;
-  display: block;
-  font-size: 0.83em;
-  -webkit-margin-before: 1.67em;
-  -webkit-margin-after: 1.67em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  font-weight: bold;
+.email-desc {
+  font-size: 80%;
+  margin: 0.4em 0;
+}
+.email-item-selected {
+  background: #eee;
+}
+.email-item-unread {
+  border-left: 6px solid #02a3c6;
+}
+/* Email Content Styles */
+.email-content-header,
+.email-content-body,
+.email-content-footer {
+  padding: 1em 2em;
+}
+.email-content-header {
+  border-bottom: 1px solid #ddd;
+}
+.email-content-title {
+  margin: 0.5em 0 0;
+}
+.email-content-subtitle {
+  font-size: 1em;
+  margin: 0;
+  font-weight: normal;
+}
+.email-content-subtitle span {
+  color: #999;
+}
+.email-content-controls {
+  margin-top: 2em;
+  text-align: right;
+}
+.email-content-controls .secondary-button {
+  margin-bottom: 0.3em;
+}
+.beerList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-top: 55px;
+}
+.beerList li {
+  padding: 14px 12px;
+  border-bottom: 1px solid #ddd;
+}
+.beerList li button {
+  float: right;
+}
+@media (max-width: 867px) {
+  #list,
+  #main {
+    width: 100%;
+  }
+  #layout {
+    padding-left: -150px;
+  }
+  #list {
+    height: 33%;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  #main {
+    position: fixed;
+    top: 33%;
+    right: 0;
+    bottom: 0;
+    left: 150px;
+    overflow: auto;
+    width: auto;
+    /* so that it's not 100% */
+  
+  }
+}
+@media (max-width: 480px) {
+  #layout,
+  #nav,
+  #list,
+  #main {
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+  #nav {
+    width: 100%;
+    height: 40px;
+    position: relative;
+  }
+  #nav .nav-menu-button {
+    display: block;
+    top: 0.5em;
+    right: 0.5em;
+    position: absolute;
+  }
+  #nav.active {
+    height: 80%;
+  }
+  .nav-inner {
+    display: none;
+  }
+  #nav.active .nav-inner {
+    display: block;
+  }
+  .email-avatar {
+    width: 40px;
+    height: 40px;
+  }
 }

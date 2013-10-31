@@ -36,6 +36,19 @@
 /* ==========================================================================
    GENERAL STYLES
    ========================================================================== */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+
 * {
     font-weight: 400;
 }
@@ -60,49 +73,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-family: @fontHeadlines;
 }
-
-/*
-table.beerTable {
-    height: 100%;
-    width: 100%;
-    border-collapse:collapse;
-    border: 0;
-    color: #fff;
-
-    thead {
-        background: none;
-    }
-
-    thead tr > th {
-        vertical-align: middle;
-        font-family: @fontHeadlines;
-        height: 60px;
-        background-color: rgba(0,0,0,.5);
-        color: #fff;
-    }
-
-    tbody tr > td {
-        border: 0;
-        vertical-align: top;
-    }
-
-    h3 {
-        margin: 0 0 3px 0;
-        font-family: @fontBody;
-        font-weight: 100;
-    }
-
-    .beerCopy {
-        padding: 0 40px 0 12px;
-    }
-
-    .style {
-        font-size: 14px;
-        color: #ccc;
-    }
-
-}
-*/
 
 
 table.beerTable {

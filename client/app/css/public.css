@@ -68,8 +68,6 @@ html {
   /* 1 */
 
   -ms-text-size-adjust: 100%;
-  /* 2 */
-
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -351,8 +349,6 @@ textarea {
   /* 2 */
 
   vertical-align: baseline;
-  /* 3 */
-
   *vertical-align: middle;
   /* 3 */
 
@@ -420,8 +416,6 @@ input[type="radio"] {
   /* 2 */
 
   *height: 13px;
-  /* 3 */
-
   *width: 13px;
   /* 3 */
 
@@ -1559,6 +1553,18 @@ striping:
 /* ==========================================================================
    GENERAL STYLES
    ========================================================================== */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
 * {
   font-weight: 400;
 }
@@ -1588,48 +1594,6 @@ h6 {
   font-weight: 400;
   font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
 }
-/*
-table.beerTable {
-    height: 100%;
-    width: 100%;
-    border-collapse:collapse;
-    border: 0;
-    color: #fff;
-
-    thead {
-        background: none;
-    }
-
-    thead tr > th {
-        vertical-align: middle;
-        font-family: @fontHeadlines;
-        height: 60px;
-        background-color: rgba(0,0,0,.5);
-        color: #fff;
-    }
-
-    tbody tr > td {
-        border: 0;
-        vertical-align: top;
-    }
-
-    h3 {
-        margin: 0 0 3px 0;
-        font-family: @fontBody;
-        font-weight: 100;
-    }
-
-    .beerCopy {
-        padding: 0 40px 0 12px;
-    }
-
-    .style {
-        font-size: 14px;
-        color: #ccc;
-    }
-
-}
-*/
 table.beerTable {
   border-collapse: collapse;
   border: 0;
@@ -1673,6 +1637,7 @@ table.beerTable .style {
 .row {
   height: 75px;
 }
+/* hide border */
 .pure-table th {
   border-left: 0px;
 }

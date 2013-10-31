@@ -26,7 +26,7 @@ function search(req, res, next) {
 	        var beerResults = JSON.parse(body)
 			console.log('Found ' + beerResults.totalResults);
 			if (beerResults.totalResults && beerResults.totalResults > 0)
-				res.send(beerResults.data);		        
+				res.send(beerResults.data);
 	    });
   	}).on('error', function(e) {
   		console.log("Got error: " + e.message);
@@ -34,7 +34,7 @@ function search(req, res, next) {
 }
 
 function searchTest(req, res, next) {
-	var request = http.get('http://beermenu.ginger/data/beers.json', function (response) {
+	var request = http.get('http://localhost:8888/beermenu/client/app/data/beers.json', function (response) {
 		var body = '';
 
 	    response.on('data', function(chunk) {
@@ -43,14 +43,15 @@ function searchTest(req, res, next) {
 
 	    response.on('end', function() {
 	        var bar = JSON.parse(body)
-			res.send(bar);		        
+			res.send(bar);
 	    });
   	}).on('error', function(e) {
   		console.log("Got error: " + e.message);
-	}); 	
+	});
  }
 
 function loadBar(req, res, next) {
+
 	mongoose.connect('mongodb://dkelley:pa55w0rd@paulo.mongohq.com:10019/beermenu');
 
 	schemas.Bar.find({"url": req.params.name}, function(err, documents) {
@@ -60,11 +61,15 @@ function loadBar(req, res, next) {
   		else
   			res.send('no bar found for ' + req.params.name);
 	});
+	//mongoose.connection.close();
+	//mongoose.disconnect();
 	return next();
  }
 
  function loadBarTest(req, res, next) {
-	var request = http.get('http://beermenu.ginger/data/'+ req.params.name + '.json', function (response) {
+ 	console.log("loadbar testing");
+ 	//http://beermenu.ginger/
+	var request = http.get('http://localhost:8888/beermenu/client/app/data/'+ req.params.name + '.json', function (response) {
 		var body = '';
 
 	    response.on('data', function(chunk) {
@@ -73,14 +78,14 @@ function loadBar(req, res, next) {
 
 	    response.on('end', function() {
 	        var bar = JSON.parse(body)
-			res.send(bar);		        
+			res.send(bar);
 	    });
   	}).on('error', function(e) {
   		console.log("Got error: " + e.message);
-	}); 	
+	});
  }
 
-// function searchForBeer(req, res, next) { 		
+// function searchForBeer(req, res, next) {
 //  	var request = http.get('http://beermenu.ginger/app/search/' + $scope.term, function (response) {
 // 		var body = '';
 
@@ -90,14 +95,14 @@ function loadBar(req, res, next) {
 
 // 	    response.on('end', function() {
 // 	        var bar = JSON.parse(body)
-// 			res.send(bar);		        
+// 			res.send(bar);
 // 	    });
 //   	}).on('error', function(e) {
 //   		console.log("Got error: " + e.message);
-// 	}); 	     
-//  } 
+// 	});
+//  }
 
-			
+
 
 server.post('/save/:name', function(req, res, next) {
 	console.log("saving %s", req.params.name);
@@ -113,12 +118,13 @@ server.post('/save/:name', function(req, res, next) {
 			console.log(error);
 	});
    	return next();
-});	
+});
 
 // setup our server
+server.use(restify.CORS());
+server.use(restify.fullResponse());
+
 server.get('/:name', loadBarTest);
 server.get('/search/:name', searchTest);
 console.log("starting server");
-server.use(restify.CORS());
-server.use(restify.fullResponse());
 server.listen(8080);

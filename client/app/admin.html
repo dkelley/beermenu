@@ -22,22 +22,34 @@
         <link rel="shortcut icon" href="img/favicon.ico" />
 
     </head>
-    <body>
-        <div class="pure-menu pure-menu-open pure-menu-horizontal" ng-controller="AdminBeerMenu">
-            <ul class="menu" role="menu" ng-switch="user != null">
-              <span ng-switch-when="true">
-                <li><a href="#/{{barUrl}}/list">Beer List</a></li>
-                <li><a ng-click="search()">Beer Search</a></li>                        
-                <li><a ng-click="preferences()">Preferences</a></li>
-                <li><a ng-click="logout()">Logout ({{user.username}})</a></li>
-              </span>
-              <span ng-switch-default>
-                <li><a ng-click="openLoginDialog()">Login</a></li>
-              </span>
-            </ul>
+    <body id="admin">
+
+        <div class="pure-g-r content" id="layout" ng-controller="AdminBeerMenu">
+            <div class="pure-u" id="nav">
+                <a href="#" class="nav-menu-button">Menu</a>
+
+                <div class="nav-inner">
+                    <div class="pure-menu pure-menu-open">
+                        <button class="pure-button pure-button-success">Kelly&#8217;s Bryn Mawr</button>
+
+                        <ul class="menu" role="menu" ng-switch="user != null">
+                            <span ng-switch-when="true">
+                                <li><a href="#/{{barUrl}}/list" class="active">Beer List</a></li>
+                                <li><a href="#" ng-click="search()">Beer Search</a></li>
+                                <li><a href="#" ng-click="preferences()">Preferences</a></li>
+                                <li><a href="#" ng-click="logout()">Logout<br />({{user.username}})</a></li>
+                            </span>
+                            <span ng-switch-default>
+                                <li><a href="#" ng-click="openLoginDialog()">Login</a></li>
+                            </span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div ng-view></div>
         </div>
 
-        <div ng-view></div>
+
 
         <!-- In production use:
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -52,5 +64,22 @@
         <script src="js/controllers.js"></script>
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
+
+        <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+        <script>
+            YUI().use('node-base', 'node-event-delegate', function (Y) {
+
+                var menuButton = Y.one('.nav-menu-button'),
+                    nav        = Y.one('#nav');
+
+                // Setting the active class name expands the menu vertically on small screens.
+                menuButton.on('click', function (e) {
+                    nav.toggleClass('active');
+                });
+
+                // Your application code goes here...
+
+            });
+        </script>
     </body>
 </html>
