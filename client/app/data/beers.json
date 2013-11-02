@@ -1,7 +1,7 @@
 [{
-      "id" : "UEHHoX",
+      "id" : "UEHHoXN",
       "active": true,
-      "name" : "All Day IPA",
+      "name" : "All Day IPA New",
       "active" : true,
       "description" : "The beer you've been waiting for. Keeps your taste satisfied while keeping your senses sharp. An all-day IPA naturally brewed with a complex array of malts, grains and hops. Balanced for optimal aromatic and a clean finish. The perfect reward for an honest day's work and the ultimate companion to celebrate life's simple pleasures.",
       "abv" : "4.7",
@@ -52,7 +52,7 @@
       },
       "brewery" : {
         "id" : "Idm5Y5",
-        "name" : "Founders Brewing Company",
+        "name" : "Founders Brewing Company New",
         "active" : true,
         "description" : "Founders Brewing Company, founded by Mike Stevens and Dave Engbers produced its first beer in November of 1997. Built out of a dream and a passion for home brewing, what started out as a hobby quickly became a thriving business.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer.\r\n\r\nCarving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.  As the years have passed, Founders has built its brewery on the exploration of recipe development and brewing techniques. We are not the standard micro-brewery, rather we have traveled a path that breaks from the standard craft-brewer. Carving a niche out of the craft industry, Founders Brewing Company has built its reputation on producing very unique beers. Our focus is to offer our wholesalers, retailers and consumers a product that stands alone on the shelf and offers a true drinking experience to our friends, the consumer.",
         "website" : "http://www.foundersbrewing.com/",
@@ -71,8 +71,8 @@
       "type" : "beer"
     },
     {
-      "id" : "Kk1Cyr",
-      "name" : "Two Hearted Ale",
+      "id" : "Kk1CyrN",
+      "name" : "Two Hearted Ale New",
       "active" : true,
       "description" : "Bell's Two Hearted Ale is defined by its intense hop aroma and malt balance. Hopped exclusively with the Centennial hop varietal from the Pacific Northwest, massive additions in the kettle and again in the fermenter lend their characteristic grapefruit and pine resin aromas. A significant malt body balances this hop presence; together with the signature fruity aromas of Bell's house yeast, this leads to a remarkably drinkable American-style India Pale Ale.",
       "abv" : "7",
@@ -142,7 +142,7 @@
       "type" : "beer"
     },
     {
-      "id" : "28clVi",
+      "id" : "28clViN",
       "name" : "Exit 4",
       "active" : true,
       "description" : "This inspired Belgian-style Trippel has a hazy golden hue and the aroma of citrus with hints of banana and clove. Predominant Belgian malt flavors give way to a subdued bitterness in the finish. Winner of a Gold Medal at the 2009 Great American Beer Festival and named by Mens Journal as best Belgian beer brewed in America for 2009.",

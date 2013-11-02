@@ -2,6 +2,9 @@ var restify = require('restify');
 var mongoose = require('mongoose');
 var http = require("http");
 
+//var baseUrl = 'http://localhost:8888/beermenu/client/app';
+var baseUrl = 'http://beermenu.ginger/';
+
 var schemas = require('./models/index')(mongoose);
 
 
@@ -34,7 +37,7 @@ function search(req, res, next) {
 }
 
 function searchTest(req, res, next) {
-	var request = http.get('http://localhost:8888/beermenu/client/app/data/beers.json', function (response) {
+	var request = http.get(baseUrl + 'data/beers.json', function (response) {
 		var body = '';
 
 	    response.on('data', function(chunk) {
@@ -69,7 +72,8 @@ function loadBar(req, res, next) {
  function loadBarTest(req, res, next) {
  	console.log("loadbar testing");
  	//http://beermenu.ginger/
-	var request = http.get('http://localhost:8888/beermenu/client/app/data/'+ req.params.name + '.json', function (response) {
+ 	console.log("loading ", baseUrl + 'data/'+ req.params.name + '.json');
+	var request = http.get(baseUrl + 'data/'+ req.params.name + '.json', function (response) {
 		var body = '';
 
 	    response.on('data', function(chunk) {

@@ -1,11 +1,39 @@
+<div class="pure-g-r">
+  <div class="pure-u-1" id="list">
+    <div class="pure-g-r admin" ng-controller="AdminBeerList">
+      <div class="pure-u-1 sortBar">
+        Search: <input ng-model="term"><button class="btn btn-default btn-sm" ng-click="search()">Search</button>
+
+        <span ng-bind-template="Showing {{(beers|filter:query).length}} of {{beers.length}}" style="float: right;"></span>
+        <!--Sidebar content-->
+          Sort by:
+          <select ng-model="orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="abv">ABV</option>
+          </select>
+      </div>
+      <div class="pure-u-1">
+        <!--Body content-->
+        <ul class="beerList">
+            <li ng-repeat="beer in beerResults | orderBy:orderProp" class="beer clearfix">
+                <button class="pure-button pure-button-primary addButton" ng-click="activateBeer(beer)">Activate</button>
+                {{beer.name}}, {{beer.breweries[0].name}} (ABV:{{beer.abv}})
+                <p style="display: none">{{beer.description}}</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+
 <div class="pure-g-r admin">
   <div class="pure-u-1">
-    Search: <input ng-model="term"><button class="btn btn-default btn-sm" ng-click="search()">Search</button>
 
   </div>
   <div class="pure-u-1">
     <div ng-repeat="beer in beerResults">
-      <!--Body content-->
       <div class="pure-u-3-4">
         <h5 class="beer-name">{{beer.name}} <button class="pure-button-primary" ng-click="activateBeer(beer)">Activate</button></h5>
         <h4 class="beer-details">>{{beer.style.name}} from {{beer.breweries[0].name}} ({{beer.abv}}%)</h4>
@@ -16,3 +44,4 @@
     </div>
   </div>
 </div>
+-->

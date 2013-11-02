@@ -23,7 +23,6 @@
 
     </head>
     <body id="admin">
-
         <div class="pure-g-r content" id="layout" ng-controller="AdminBeerMenu">
             <div class="pure-u" id="nav">
                 <a href="#" class="nav-menu-button">Menu</a>
@@ -34,8 +33,8 @@
 
                         <ul class="menu" role="menu" ng-switch="user != null">
                             <span ng-switch-when="true">
-                                <li><a href="#/{{barUrl}}/list" class="active">Beer List</a></li>
-                                <li><a href="#" ng-click="search()">Beer Search</a></li>
+                                <li><a href="#/kellysbrynmawr/list" class="active">Beer List</a></li>
+                                <li><a href="#/kellysbrynmawr/search" class="active">Beer Search</a></li>
                                 <li><a href="#" ng-click="preferences()">Preferences</a></li>
                                 <li><a href="#" ng-click="logout()">Logout<br />({{user.username}})</a></li>
                             </span>

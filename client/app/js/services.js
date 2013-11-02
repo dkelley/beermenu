@@ -17,19 +17,37 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 
 	this.$get = function($http) {
 		return {
+			barData: function(){
+				return {};
+			},
 			loadBar: function(barName, onSuccess){
-				console.log("loading ", barName);
-
 				if (that.cache[barName] == null){
+					console.log("loading ", barName);
 					$http.get('http://localhost:8080/' + barName).success(function(data) {
 						console.log("loaded bar", data.name);
 						that.cache[barName] = data;
 						onSuccess(data);
 				    });
 				}else{
-					return that.cache[barName];
+					console.log("cached ", that.cache[barName]);
+					onSuccess(that.cache[barName]);
 				}
 			},
+			addBeer: function(bar, beer, onSuccess){
+				console.log("adding ", beer.name," from ", bar.name);
+				bar.onTap.push(beer);
+				return bar;
+			},			
+			removeBeer: function(bar, beer, onSuccess){
+				console.log("removing ", beer.name," from ", bar.name);
+				for (var i = bar.onTap.length - 1; i >= 0; i--) {
+					if (bar.onTap[i].id == beer.id){
+						bar.onTap.splice(i,1);
+						return bar;
+					}
+				};
+				return bar;
+			},			
 			loadRows: function(bar, numberOfColumns, beers){
 				var row = [];
 				var beerRows = [];

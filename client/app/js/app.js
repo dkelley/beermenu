@@ -26,8 +26,10 @@ angular.module('beerMenuAdmin', [
   'beerMenu.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/:barUrl/list', {templateUrl: 'partials/admin/list.html', controller: 'AdminBeerList'});
+  $routeProvider.when('/:barUrl/list', {templateUrl: 'partials/admin/list.html', controller: 'AdminBeerController'});
   $routeProvider.when('/:barUrl/search', {templateUrl: 'partials/admin/search.html', controller: 'AdminBeerSearch'});
+  $routeProvider.when('/:barUrl/preferences', {templateUrl: 'partials/admin/search.html', controller: 'AdminBeerController'});
+  $routeProvider.when('/:barUrl/logout', {templateUrl: 'partials/admin/search.html', controller: 'AdminBeerController'});
   $routeProvider.otherwise({redirectTo: '/kellysbrynmawr/list'});
 }]);
 
