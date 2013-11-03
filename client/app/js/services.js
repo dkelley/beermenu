@@ -20,6 +20,14 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 			barData: function(){
 				return {};
 			},
+			saveBar: function(bar, onSuccess){
+				console.log("saving ", bar.name);
+				$http.put('http://beermenu.ginger/app/'+bar.name, JSON.stringify(bar).success(function(data) {
+					console.log("saved bar", data);
+					//that.cache[bar.name] = data;
+					onSuccess(data);
+			    });
+			},			
 			loadBar: function(barName, onSuccess){
 				if (that.cache[barName] == null){
 					console.log("loading ", barName);
@@ -30,7 +38,7 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 				    });
 				}else{
 					console.log("cached ", that.cache[barName]);
-					onSuccess(that.cache[barName]);
+					onSuccess(that.cache[barName])	;
 				}
 			},
 			addBeer: function(bar, beer, onSuccess){

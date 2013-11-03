@@ -68,6 +68,7 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
 
       $scope.activateBeer = function (beer){
         $scope.bar = beerListService.addBeer($scope.bar, beer);
+        beerListService.saveBar($scope.bar);
       }    
     });
   }])

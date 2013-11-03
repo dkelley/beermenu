@@ -55,7 +55,6 @@ function searchTest(req, res, next) {
 
 function loadBar(req, res, next) {
 
-	mongoose.connect('mongodb://dkelley:pa55w0rd@paulo.mongohq.com:10019/beermenu');
 
 	schemas.Bar.find({"url": req.params.name}, function(err, documents) {
 		console.log("found " + documents.length);
@@ -66,6 +65,35 @@ function loadBar(req, res, next) {
 	});
 	//mongoose.connection.close();
 	//mongoose.disconnect();
+	return next();
+ }
+
+function updateBar(req, res, next) {
+	schemas.Bar.findOne({"url": req.params.name}, function (err, doc) {
+		console.log(doc.onTap);
+		var beers = req.body.onTap;
+		console.log("beers", beers);
+  		doc.set({"onTap": beers});
+  		console.log("result:", doc);
+	  	doc.save(function(error, bar){
+			if (!error)
+			   return res.send(doc);
+			else
+				console.log(error);		
+			return next();
+		});
+	});
+}
+
+function saveBar(req, res, next) {
+	console.log("1 updating %s", req.params.name);
+	var bar = new schemas.Bar(req.body);
+	bar.save(function(error, bar){
+		if (!error)
+		   return res.send(bar);
+		else
+			console.log(error);
+	});	
 	return next();
  }
 
@@ -107,28 +135,18 @@ function loadBar(req, res, next) {
 //  }
 
 
+mongoose.connect('mongodb://dkelley:pa55w0rd@paulo.mongohq.com:10019/beermenu');
 
-server.post('/save/:name', function(req, res, next) {
-	console.log("saving %s", req.params.name);
-	console.log("schemas", schemas);
-	console.log("bar", schemas.Bar);
-	var bar = new schemas.Bar({name: req.params.name});
-	console.log("created %s", bar);
-	bar.save(function(error, bar){
-		console.log("callback", error);
-		if (!error)
-		   return res.send(bar);
-		else
-			console.log(error);
-	});
-   	return next();
-});
 
 // setup our server
 server.use(restify.CORS());
 server.use(restify.fullResponse());
+server.use(restify.bodyParser({ mapParams: true }));
+//server.use(restify.bodyParser());
 
-server.get('/:name', loadBarTest);
-server.get('/search/:name', searchTest);
+server.get('/:name', loadBar);
+server.get('/search/:name', search);
+server.put('/:name', updateBar);
+server.post('/:name', saveBar);
 console.log("starting server");
 server.listen(8080);

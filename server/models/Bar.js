@@ -1,11 +1,7 @@
 module.exports = function (mongoose){
     var barSchema = mongoose.Schema({
         name: String,
-        beers: [{
-            name: String,
-            price: Number,
-            active: Boolean,
-        }],
+        onTap: [],
         specials: [{
             title: String,
             description: String
