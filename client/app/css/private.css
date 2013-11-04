@@ -1594,6 +1594,21 @@ h6 {
   font-weight: 400;
   font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
 }
+table.beerHeader {
+  border-collapse: collapse;
+  border: 0;
+  color: #fff;
+}
+table.beerHeader thead {
+  background: none;
+}
+table.beerHeader thead tr > th {
+  vertical-align: middle;
+  font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
 table.beerTable {
   border-collapse: collapse;
   border: 0;
@@ -1618,12 +1633,17 @@ table.beerTable h3 {
   font-family: "montserratregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
+table.beerTable .imageFrame {
+  float: left;
+}
 table.beerTable .beerCopy {
-  padding: 0 40px 0 12px;
+  padding: 16px 0 0 0;
+  margin-left: 160px;
+  display: block;
 }
 table.beerTable .style {
-  font-size: 14px;
-  color: #ccc;
+  font-size: 18px;
+  color: #f4f4f4;
 }
 #background {
   position: absolute;

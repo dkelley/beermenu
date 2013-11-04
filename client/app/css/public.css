@@ -68,8 +68,6 @@ html {
   /* 1 */
 
   -ms-text-size-adjust: 100%;
-  /* 2 */
-
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -351,8 +349,6 @@ textarea {
   /* 2 */
 
   vertical-align: baseline;
-  /* 3 */
-
   *vertical-align: middle;
   /* 3 */
 
@@ -420,8 +416,6 @@ input[type="radio"] {
   /* 2 */
 
   *height: 13px;
-  /* 3 */
-
   *width: 13px;
   /* 3 */
 
@@ -1639,8 +1633,13 @@ table.beerTable h3 {
   font-family: "montserratregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
+table.beerTable .imageFrame {
+  float: left;
+}
 table.beerTable .beerCopy {
-  padding: 0 40px 0 12px;
+  padding: 16px 0 0 0;
+  margin-left: 160px;
+  display: block;
 }
 table.beerTable .style {
   font-size: 18px;
@@ -1691,7 +1690,7 @@ div.imageFrame {
 }
 
 .row.ng-enter.ng-enter-active {
-	max-height: 120px;	
+	max-height: 120px;
 }
 
 .row.ng-leave {
