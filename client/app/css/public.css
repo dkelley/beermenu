@@ -1663,6 +1663,13 @@ table.beerTable .style {
 .beerTable {
   margin-top: 80px;
 }
+div.imageFrame {
+  height: 140px;
+  width: 140px;
+  background-color: #ccc;
+  border: 6px solid transparent;
+  border-radius: 8px;
+}
 /* hide border */
 .pure-table th {
   border-left: 0px;
