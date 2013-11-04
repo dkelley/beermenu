@@ -15,7 +15,7 @@
         <!--Body content-->
         <ul class="beerList">
             <li ng-repeat="beer in beers | filter:query | orderBy:orderProp" class="beer clearfix">
-                <button class="pure-button pure-button-primary removeButton" ng-disabled="!beer.active" ng-click="removeBeer(beer)">Remove</button>
+                <button class="pure-button pure-button-primary removeButton" ng-click="removeBeer(beer)">Remove</button> <!-- ng-disabled="!beer.active" -->
                 {{beer.name}}, {{beer.breweries[0].name}} (ABV:{{beer.abv}})
                 <p style="display: none">{{beer.description}}</p>
             </li>

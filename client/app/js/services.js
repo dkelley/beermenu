@@ -22,10 +22,11 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 			},
 			saveBar: function(bar, onSuccess){
 				console.log("saving ", bar.name);
-				$http.put('http://beermenu.ginger/app/'+bar.name, bar).success(function(data) {
-					console.log("saved bar", data);
+				$http.put('http://beermenu.ginger/app/' + bar.url, bar).success(function(data) {
+					console.log("saved bar");
 					//that.cache[bar.name] = data;
-					onSuccess(data);
+					if (onSuccess)
+						onSuccess(data);
 			    });
 			},			
 			loadBar: function(barName, onSuccess){

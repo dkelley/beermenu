@@ -1,0 +1,27 @@
+<div header style="width: 100%; height: 75px; background: black; z-index: 9999;position: fixed; top: 0px">
+    <table class="beerHeader pure-table" width="100%" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th colspan="">
+                    <h1>{{bar.name}}</h1>
+                </th>
+                <th align="right">
+                    <h1>Specials</h1>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="container" style="z-index: -1">
+    <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <tbody>    
+            <tr>
+                <td class="topSpacer">&nbsp;</td>
+            </tr>        
+            <tr class="row" ng-repeat="special in specials" id="special{{$index}}" >
+            	<td class="specialDay">{{special.dayOfWeek}}</td>
+                <td class="specialDetails">{{special.details}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

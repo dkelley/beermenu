@@ -68,6 +68,9 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
     beerListService.loadBar($routeParams.barUrl, function(bar){
       $scope.bar = bar;
 
+      $scope.message = "This is an alert";
+      $scope.beerResults = [];
+
       $scope.search = function(){
         console.log("search:", $scope.term);
         beerListService.search($scope.term, function(results){
@@ -80,7 +83,9 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
 
       $scope.activateBeer = function (beer){
         $scope.bar = beerListService.addBeer($scope.bar, beer);
-        beerListService.saveBar($scope.bar);
+        beerListService.saveBar($scope.bar, function(){
+          $scope.message = "Success saving beer";
+        });
       }    
     });
   }])

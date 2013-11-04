@@ -54,12 +54,16 @@ function searchTest(req, res, next) {
  }
 
 function loadBar(req, res, next) {
-	schemas.Bar.find({"url": req.params.name}, function(err, documents) {
-		console.log("found " + documents.length);
-		if (!err && documents.length > 0)
-  			res.send(documents[0]);
+	schemas.Bar.findOne({"url": req.params.name}, function (err, doc) {
+
+	//schemas.Bar.find({"url": req.params.name}, function(err, documents) {
+		// 
+		if (!err){
+			console.log("found " + doc.name);
+  			res.send(doc);
+		}
   		else
-  			res.send('no bar found for ' + req.params.name);
+  			res.send({"error": 'no bar found for ' + req.params.name});
 	});
 	//mongoose.connection.close();
 	//mongoose.disconnect();
@@ -68,11 +72,8 @@ function loadBar(req, res, next) {
 
 function updateBar(req, res, next) {
 	schemas.Bar.findOne({"url": req.params.name}, function (err, doc) {
-		console.log(doc.onTap);
 		var beers = req.body.onTap;
-		console.log("beers", beers);
   		doc.set({"onTap": beers});
-  		console.log("result:", doc);
 	  	doc.save(function(error, bar){
 			if (!error)
 			   return res.send(doc);

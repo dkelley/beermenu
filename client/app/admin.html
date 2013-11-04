@@ -34,9 +34,11 @@
                         <ul class="menu" role="menu" ng-switch="user != null">
                             <span ng-switch-when="true">
                                 <li><a href="#/kellysbrynmawr/list" class="active">Beer List</a></li>
-                                <li><a href="#/kellysbrynmawr/search" class="active">Beer Search</a></li>
+                                <li><a href="#/kellysbrynmawr/search">Beer Search</a></li>
+                                <!--
                                 <li><a href="#" ng-click="preferences()">Preferences</a></li>
                                 <li><a href="#" ng-click="logout()">Logout<br />({{user.username}})</a></li>
+                                -->
                             </span>
                             <span ng-switch-default>
                                 <li><a href="#" ng-click="openLoginDialog()">Login</a></li>
