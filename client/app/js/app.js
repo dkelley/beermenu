@@ -13,7 +13,7 @@ angular.module('beerMenuApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/:bar/beerlist/:page', {templateUrl: 'partials/beerlist.html', controller: 'BeerList'});
   $routeProvider.when('/:bar/specials/:page', {templateUrl: 'partials/partial2.html', controller: 'Specials'});
-  $routeProvider.otherwise({redirectTo: '/unknown/beerlist/1'});
+  $routeProvider.otherwise({redirectTo: '/kellysbrynmawr/beerlist/1'});
 }]);
 
 

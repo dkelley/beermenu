@@ -68,6 +68,8 @@ html {
   /* 1 */
 
   -ms-text-size-adjust: 100%;
+  /* 2 */
+
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -349,6 +351,8 @@ textarea {
   /* 2 */
 
   vertical-align: baseline;
+  /* 3 */
+
   *vertical-align: middle;
   /* 3 */
 
@@ -416,6 +420,8 @@ input[type="radio"] {
   /* 2 */
 
   *height: 13px;
+  /* 3 */
+
   *width: 13px;
   /* 3 */
 
@@ -1594,6 +1600,21 @@ h6 {
   font-weight: 400;
   font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
 }
+table.beerHeader {
+  border-collapse: collapse;
+  border: 0;
+  color: #fff;
+}
+table.beerHeader thead {
+  background: none;
+}
+table.beerHeader thead tr > th {
+  vertical-align: middle;
+  font-family: "montserratbold", "NovecentowideBookBold", sans-serif;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
 table.beerTable {
   border-collapse: collapse;
   border: 0;
@@ -1622,8 +1643,8 @@ table.beerTable .beerCopy {
   padding: 0 40px 0 12px;
 }
 table.beerTable .style {
-  font-size: 14px;
-  color: #ccc;
+  font-size: 18px;
+  color: #f4f4f4;
 }
 #background {
   position: absolute;
@@ -1634,14 +1655,23 @@ table.beerTable .style {
 /* ==========================================================================
    PUBLIC CUSTOM STYLES
    ========================================================================== */
-.row {
-  height: 75px;
+.beer h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.beerTable {
+  margin-top: 80px;
 }
 /* hide border */
 .pure-table th {
   border-left: 0px;
 }
 /*
+.row {
+  height: 100px;
+}
+
 .row.ng-enter, .row.ng-leave {
   -webkit-transition: height 2.0s ease-in;
   -moz-transition: height 2.0s ease-in;
@@ -1654,7 +1684,7 @@ table.beerTable .style {
 }
 
 .row.ng-enter.ng-enter-active {
-	max-height: 100px;	
+	max-height: 120px;	
 }
 
 .row.ng-leave {

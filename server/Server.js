@@ -54,8 +54,6 @@ function searchTest(req, res, next) {
  }
 
 function loadBar(req, res, next) {
-
-
 	schemas.Bar.find({"url": req.params.name}, function(err, documents) {
 		console.log("found " + documents.length);
 		if (!err && documents.length > 0)

@@ -1,33 +1,41 @@
-<table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
-    <thead>
-        <tr>
-            <th colspan="">
-                <h1>{{bar.name}}</h1>
-            </th>
-            <th>
-                <h1>On Tap</h1>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="row" ng-repeat="beerRow in beerRows" >
-            <td class="beer" ng-repeat="beer in beerRow">
-                <div class="pure-g-r">
-                    <div class="pure-u-1-6">
-                        <img ng-src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" />
+<div header style="width: 100%; height: 75px; background: black; z-index: 9999;position: fixed; top: 0px">
+    <table class="beerHeader pure-table" width="100%" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th colspan="">
+                    <h1>{{bar.name}}</h1>
+                </th>
+                <th align="right">
+                    <h1>On Tap</h1>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="container" style="z-index: -1">
+    <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <tbody>    
+            <tr>
+                <td class="topSpacer">&nbsp;</td>
+            </tr>        
+            <tr class="row" ng-repeat="beerRow in beerRows" id="beerRow{{$index}}" >
+                <td class="beer" ng-repeat="beer in beerRow">
+                    <div class="pure-g-r">
+                        <div class="pure-u-1-6">                
+                            <div class="imageFrame" style="height: 140px; width: 140px; padding: 3px; background-color: #000;"/>
+                                <img ng-src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" height="100%" />
+                            </div>
+                        </div>
+                        <div class="pure-u-5-6">
+                            <div class="beerCopy">
+                                <h2>{{beer.name}}</h2>
+                                <h3>{{beer.brewery.name}}, {{beer.abv}}%</h3>
+                                <div class="style">{{beer.style.name}}</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pure-u-5-6">
-                        <div class="beerCopy">
-                            <h3>{{beer.name}}</h3>
-                            {{beer.brewery.name}}, {{beer.abv}}%
-                            <div class="style">{{beer.style.name}}</body>
-                        </body>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="bottomSpacer">&nbsp;</td>
-        </tr>
-    </tbody>
-</table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

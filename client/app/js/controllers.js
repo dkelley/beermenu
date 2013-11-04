@@ -15,18 +15,28 @@ beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams
   		beers = beers.sort(function(a,b){
   			return a.name < b.name
   		});
-  		$scope.beerRows = beerListService.loadRows(bar, numberOfColumns, beers);
-      $(".beerTable thead th").attr({"colspan" : numberOfColumns-1});
+  		$scope.beerRows = beerListService.loadRows(bar, 2, beers);
+      // $(".beerTable thead th").attr({"colspan" : numberOfColumns-1});
       $("td.bottomSpacer").attr({"colspan" : numberOfColumns});
       $("td.bottomSpacer").attr({"height" : 100});
 
       // start rotating the beers
-      var rotate = function(){
-  			var row = $scope.beerRows.pop();
-  			$scope.beerRows.unshift(row);
-  			$timeout(rotate, 5000);
+      var yIndex = -1;
+
+      var rotate = function(section){
+        $('body').scrollTo('#beerRow'+section, 1500, {"offset" : -85 });
+          if (yIndex !=  window.scrollY) {
+            var timeoutCount = 3000;
+            if (yIndex == -1)
+              timeoutCount = 6000;
+            $timeout(function(){rotate(++section)}, timeoutCount);
+          }else{
+            yIndex = -1;
+            rotate(0);
+          }
+          yIndex =  window.scrollY;
   		};	
-      $timeout(rotate, 5000);
+      $timeout(function(){rotate(1)}, 3000);
   	 });
   }]);
 
@@ -49,6 +59,7 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
 
       $scope.removeBeer = function(beer){
         $scope.bar = beerListService.removeBeer($scope.bar, beer);
+        beerListService.saveBar($scope.bar);
       }
 
     });
@@ -58,6 +69,7 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
       $scope.bar = bar;
 
       $scope.search = function(){
+        console.log("search:", $scope.term);
         beerListService.search($scope.term, function(results){
           var beers = results.sort(function(a,b){
             return a.name < b.name
