@@ -16,10 +16,10 @@
     <table class="beerTable pure-table" height="100%" width="100%" cellpadding="0" cellspacing="0">
         <tbody>
             <tr>
-                <td class="topSpacer">&nbsp;</td>
+                <td class="topSpacer" colspan="2">&nbsp;</td>
             </tr>
             <tr class="row" ng-repeat="beerRow in beerRows" id="beerRow{{$index}}" >
-                <td class="beer" ng-repeat="beer in beerRow">
+                <td class="beer" ng-repeat="beer in beerRow" width="50%">
                     <div class="imageFrame" />
                         <img ng-src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" height="100%" />
                     </div>

@@ -22,7 +22,7 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 			},
 			saveBar: function(bar, onSuccess){
 				console.log("saving ", bar.name);
-				$http.put('http://beermenu.ginger/app/' + bar.url, bar).success(function(data) {
+				$http.put('http://107.21.239.118/app/' + bar.url, bar).success(function(data) {
 					console.log("saved bar");
 					//that.cache[bar.name] = data;
 					if (onSuccess)
@@ -32,7 +32,7 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 			loadBar: function(barName, onSuccess){
 				if (that.cache[barName] == null){
 					console.log("loading ", barName);
-					$http.get('http://localhost:8080/' + barName).success(function(data) {
+					$http.get('http://107.21.239.118/app/' + barName).success(function(data) {
 						console.log("loaded bar", data.name);
 						that.cache[barName] = data;
 						onSuccess(data);
@@ -83,7 +83,7 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 			},
 			search: function(term, onSuccess){
 				console.log("searching for", term);
-				$http.get('http://localhost:8080/search/' + term).success(function(data) {
+				$http.get('http://107.21.239.118/app/search/' + term).success(function(data) {
 					console.log("found ", data.length);
 					onSuccess(data);
 			    });

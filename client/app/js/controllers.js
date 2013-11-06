@@ -4,11 +4,8 @@
 var beerMenuApp = angular.module('beerMenu.controllers', []);
 
 beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams', '$route', 'beerListService', function($scope, $http, $timeout, $routeParams, $route, beerListService){
-  	console.log("page:" + $routeParams.page);
-    console.log("bar:" + $routeParams.bar);
   	beerListService.loadBar($routeParams.bar, function(bar){
   		$scope.bar = bar;
-  		console.log("Found " + bar.onTap.length + " beers");
   		var numberOfColumns = bar.displaySettings.numberOfColumns ? bar.displaySettings.numberOfColumns : defaultNumberOfColumnms;
 
   		var beers = bar.onTap;
@@ -44,7 +41,6 @@ beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams
 // Admin app controllers
 beerMenuApp.controller('AdminBeerController', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
   beerListService.barData.baseUrl = $routeParams.barUrl;
-  console.log("AdminBeerController:" , beerListService.barData.baseUrl);
 }]);
 
 beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
@@ -72,8 +68,7 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
       $scope.beerResults = [];
 
       $scope.search = function(){
-        console.log("search:", $scope.term);
-        beerListService.search($scope.term, function(results){
+	  beerListService.search($scope.term, function(results){
           var beers = results.sort(function(a,b){
             return a.name < b.name
           });
@@ -91,7 +86,6 @@ beerMenuApp.controller('AdminBeerList', ['$scope', '$http', '$routeParams', '$ro
   }])
   .controller('AdminBeerMenu', ['$scope', '$http', '$routeParams', '$route', 'beerListService', function($scope, $http, $routeParams, $route, beerListService){
     $scope.baseUrl = beerListService.barData.baseUrl;
-    console.log('AdminBeerMenu', $scope.baseUrl);
     $scope.user = {"username":"dkelley"};
     
   }]);

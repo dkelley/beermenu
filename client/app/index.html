@@ -44,5 +44,14 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/directives.js"></script>
+<script type="javascript">
+
+$(function() {
+	// 1 Hour = 3600000 Milliseconds
+	var t = setTimeout(function(){location.reload()},3600000);
+	if (console)
+		console.log("page reloaded")
+});
+</script>
 </body>
 </html>
