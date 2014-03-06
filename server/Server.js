@@ -2,7 +2,6 @@ var restify = require('restify');
 var mongoose = require('mongoose');
 var http = require("http");
 
-//var baseUrl = 'http://localhost:8888/beermenu/client/app';
 var baseUrl = 'http://beermenu.ginger/';
 
 var schemas = require('./models/index')(mongoose);
@@ -54,10 +53,7 @@ function searchTest(req, res, next) {
  }
 
 function loadBar(req, res, next) {
-	schemas.Bar.findOne({"url": req.params.name}, function (err, doc) {
-
-	//schemas.Bar.find({"url": req.params.name}, function(err, documents) {
-		// 
+	schemas.Bar.findOne	({"url": req.params.name}, function (err, doc) {
 		if (!err){
 			console.log("found " + doc.name);
   			res.send(doc);
@@ -65,8 +61,6 @@ function loadBar(req, res, next) {
   		else
   			res.send({"error": 'no bar found for ' + req.params.name});
 	});
-	//mongoose.connection.close();
-	//mongoose.disconnect();
 	return next();
  }
 
@@ -134,7 +128,7 @@ function saveBar(req, res, next) {
 //  }
 
 
-mongoose.connect('mongodb://dkelley:pa55w0rd@paulo.mongohq.com:10019/beermenu');
+//mongoose.connect('mongodb://dkelley:pa55w0rd@paulo.mongohq.com:10019/beermenu');
 
 
 // setup our server
@@ -143,7 +137,7 @@ server.use(restify.fullResponse());
 server.use(restify.bodyParser({ mapParams: true }));
 //server.use(restify.bodyParser());
 
-server.get('/:name', loadBar);
+server.get('/:name', loadBarTest);
 server.get('/search/:name', search);
 server.put('/:name', updateBar);
 server.post('/:name', saveBar);

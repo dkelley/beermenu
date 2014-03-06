@@ -36,6 +36,8 @@ angular.module('beerMenu.services').provider('beerListService', function() {
 						console.log("loaded bar", data.name);
 						that.cache[barName] = data;
 						onSuccess(data);
+				    }).error(function(data, status, headers, config) {
+				    	console.log("lfailed to load bar", data.name);
 				    });
 				}else{
 					console.log("cached ", that.cache[barName]);

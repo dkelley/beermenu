@@ -1,10 +1,22 @@
 'use strict';
 
 /* Controllers */
+var weekday=new Array(7);
+weekday[0]="Sunday";
+weekday[1]="Monday";
+weekday[2]="Tuesday";
+weekday[3]="Wednesday";
+weekday[4]="Thursday";
+weekday[5]="Friday";
+weekday[6]="Saturday";
+
 var beerMenuApp = angular.module('beerMenu.controllers', []);
 
 beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams', '$route', 'beerListService', function($scope, $http, $timeout, $routeParams, $route, beerListService){
   	beerListService.loadBar($routeParams.bar, function(bar){
+	  	console.log("page:" + $routeParams.page);
+    	console.log("bar:" + $routeParams.bar);
+    	$scope.hasSpecial = false;    
   		$scope.bar = bar;
   		var numberOfColumns = bar.displaySettings.numberOfColumns ? bar.displaySettings.numberOfColumns : defaultNumberOfColumnms;
 
@@ -20,6 +32,21 @@ beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams
       // start rotating the beers
       var yIndex = -1;
 
+      var updateSpecial = function(indexDayOfWeek){
+        var dayOfWeek = weekday[indexDayOfWeek];
+
+        if(angular.isDefined(bar.specials && bar.specials[dayOfWeek])){
+          $scope.specialDetails = bar.specials[dayOfWeek];
+          $scope.dayOfWeek = dayOfWeek + "s";
+          $scope.hasSpecial = true;
+        }else{
+          $scope.hasSpecial = false;
+        }
+        if (indexDayOfWeek>7)
+          indexDayOfWeek=0;
+        $timeout(function(){updateSpecial(++indexDayOfWeek)}, 15000);
+      };
+
       var rotate = function(section){
         $('body').scrollTo('#beerRow'+section, 1500, {"offset" : -85 });
           if (yIndex !=  window.scrollY) {
@@ -33,7 +60,8 @@ beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams
           }
           yIndex =  window.scrollY;
   		};	
-      $timeout(function(){rotate(1)}, 3000);
+      $timeout(function(){rotate(0)}, 3000);
+      $timeout(function(){updateSpecial(1)}, 3000);
   	 });
   }]);
 
