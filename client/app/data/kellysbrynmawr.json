@@ -8,6 +8,11 @@
 	"bottled" : [
 		
 	],
+	"specials":{
+		"Monday": "5$ Coors light pitchers",
+		"Tuesday": "2$ Coors light bottles",
+		"Friday": "Friday night special"
+	},
 	"onTap" : [
 		{
 			"id" : "UEHHoX",

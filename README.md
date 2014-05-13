@@ -28,3 +28,6 @@ http://purecss.io/grids/
 
 === Angular ===
 API http://docs.angularjs.org/api
+
+=== Node on amazon server == 
+http://www.bennadel.com/blog/2321-How-I-Got-Node-js-Running-On-A-Linux-Micro-Instance-Using-Amazon-EC2.htm

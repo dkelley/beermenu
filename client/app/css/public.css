@@ -1671,9 +1671,11 @@ td.beer:n-child(2) {
 div.imageFrame {
   height: 120px;
   width: 120px;
-  background-color: #ccc;
-  border: 6px solid transparent;
-  border-radius: 8px;
+}
+div.imageFrame img {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 /* hide border */
 .pure-table th {
