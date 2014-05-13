@@ -1659,6 +1659,12 @@ table.beerTable .style {
   margin-bottom: 10px;
   font-size: 25px;
 }
+td.beer:first-child {
+	padding-left: 30px;
+}
+td.beer:n-child(2) {
+	padding-right: 30px;
+}
 .beerTable {
   margin-top: 80px;
 }
