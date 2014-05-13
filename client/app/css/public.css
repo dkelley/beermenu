@@ -122,7 +122,7 @@ h2 {
   margin: 0.83em 0;
 }
 h3 {
-  font-size: 1.17em;
+  font-size: 1.3em;
   margin: 1em 0;
 }
 h4 {
@@ -1642,7 +1642,7 @@ table.beerTable .beerCopy {
   display: block;
 }
 table.beerTable .style {
-  font-size: 18px;
+  font-size: 1.3em;
   color: #f4f4f4;
 }
 #background {
@@ -1657,8 +1657,14 @@ table.beerTable .style {
 .beer h2 {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 2.2em;
 }
+
+.beer h3 {
+  padding-top: .5em;
+  font-size: 1.5em;
+}
+
 td.beer:first-child {
 	padding-left: 30px;
 }
@@ -1669,8 +1675,10 @@ td.beer:n-child(2) {
   margin-top: 80px;
 }
 div.imageFrame {
-  height: 120px;
-  width: 120px;
+  padding-left: 70px;
+  padding-right: 20px;
+  height: 150px;
+  width: 150px;
 }
 div.imageFrame img {
   -webkit-border-radius: 6px;

@@ -19,7 +19,7 @@
                 <td class="topSpacer" colspan="2">&nbsp;</td>
             </tr>
             <tr class="row" ng-repeat="beerRow in beerRows" id="beerRow{{$index}}" >
-                <td class="beer" ng-repeat="beer in beerRow" width="50%">
+                <td class="beer" ng-repeat="beer in beerRow" >
                     <div class="imageFrame" />
                         <img ng-src="{{beer.labels.large}}" alt="{{beer.name}} label" width="100%" height="100%" />
                     </div>

@@ -18,16 +18,17 @@ beerMenuApp.controller('BeerList', ['$scope', '$http', '$timeout', '$routeParams
     	console.log("bar:" + $routeParams.bar);
     	$scope.hasSpecial = false;    
   		$scope.bar = bar;
-  		var numberOfColumns = bar.displaySettings.numberOfColumns ? bar.displaySettings.numberOfColumns : defaultNumberOfColumnms;
+  		var numberOfColumns = 1 //bar.displaySettings.numberOfColumns ? bar.displaySettings.numberOfColumns : 1 //defaultNumberOfColumnms;
 
   		var beers = bar.onTap;
   		beers = beers.sort(function(a,b){
   			return a.name < b.name
   		});
-  		$scope.beerRows = beerListService.loadRows(bar, 2, beers);
+  		$scope.beerRows = beerListService.loadRows(bar, numberOfColumns, beers);
       // $(".beerTable thead th").attr({"colspan" : numberOfColumns-1});
       $("td.bottomSpacer").attr({"colspan" : numberOfColumns});
       $("td.bottomSpacer").attr({"height" : 100});
+      $("td.beer").attr({"width" : 100/numberOfColumns});
 
       // start rotating the beers
       var yIndex = -1;
